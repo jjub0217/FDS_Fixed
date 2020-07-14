@@ -1,0 +1,30 @@
+/*@charset "utf-8"; /*<- html에서 utf-8 로 인코딩 하려고 하면 css 에서도 이렇게 선언해야 한다.
+                        하지만 최신 html 에서는 오히려 이걸 선언하면 에러가 날수도 있기 때문에 
+                        최근은 생략하고 있다.*/
+
+/* RGB : RRGGBB 
+        - RR / GG /BB
+        - 16*16 = 256 / 16*16 = 256 / 16*16 = 256 
+*/
+
+/* 에이전트 스타일 = 브라우저 스타일
+    어서 스타일 = 제작자 스타일
+    유저 스타일 = 사용자 스타일 */
+
+/* woff2 : 최신 웹폰트 */
+
+@import url(./normalize.css);/*<- 가져오기 선언할때 사용하는 명령어 : import
+                                normalize.css 스타일 : 노멀하게 만들어주는 css 파일
+                                @ 기호 붙는 속성은 문서 제일 위에 선언해줘야 한다.*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); /*<- spoqa_han_sans : 구글하고 어도비가 합작해서 만든 font(아시아를 위한 폰트: 본고딕체)이다.*/
+
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    color: #181818;
+    background-color: #fff;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400px;
+}

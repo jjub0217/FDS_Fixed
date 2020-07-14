@@ -11,10 +11,14 @@
                     ex) .loginform__username .login__username--error{
                         }
                 2. SMACSS
-                3. OOCSS    
-                    
-                    
-                    -->
+                3. OOCSS -->
+
+<!--1. External 방식
+    2. Embedded 방식
+    3. Inline 방식  -->
+
+<!-- type="text/css" : HTML5 에서는 생략가능 -->
+
 
 <!DOCTYPE html>
 <html lang="ko-KR">
@@ -22,19 +26,20 @@
 <head>
     <meta charset="UTF-8">
     <title>웹카페-HTML5, CSS3, 웹표준, 웹접근성</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="header">헤더</header>
-        <div class="visual">비주얼</div>
+        <header class="header">header</header>
+        <div class="visual">visual</div>
         <main class="main">메인콘텐츠
             <div class="group group1">group1</div>
             <div class="group group2">group2</div>
             <div class="group group3">group3</div>
         </main>
-        <article class="slogan_ footer-bg">푸터배경
-            <footer class="footer">푸터</footer>
+        <article class="slogan_ footer-bg">slogan
+            <footer class="footer">footer</footer>
         </article>
     </div>
 </body>
