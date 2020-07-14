@@ -1,3 +1,21 @@
+<!-- 네이밍 사용방법 
+        1. id : 고유한 이름이어야 함. (#)
+        2. class : 중복되는 이름 사용 가능 (.)
+            - 네이밍 컨벤션 
+                1. 파스칼케이스 : "MainContent"
+                2. 카멜케이스 : "mainContent"
+                3. 케밥케이스 : "main-content"
+                4. 스네이크케이스 : "main_content"
+            - 클래스 네이밍 컨벤션
+                1. BEM(Block, Element, Modifier) : 어떤 Block 인지 알수 있게끔 설정
+                    ex) .loginform__username .login__username--error{
+                        }
+                2. SMACSS
+                3. OOCSS    
+                    
+                    
+                    -->
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -7,12 +25,17 @@
 </head>
 
 <body>
-    <div>
-        <header>헤더</header>
-        <div>비주얼</div>
-        <main>메인 콘텐츠</main>
-        <article>슬로건</article>
-        <footer>푸터</footer>
+    <div class="container">
+        <header class="header">헤더</header>
+        <div class="visual">비주얼</div>
+        <main class="main">메인콘텐츠
+            <div class="group group1">group1</div>
+            <div class="group group2">group2</div>
+            <div class="group group3">group3</div>
+        </main>
+        <article class="slogan_ footer-bg">푸터배경
+            <footer class="footer">푸터</footer>
+        </article>
     </div>
 </body>
 
