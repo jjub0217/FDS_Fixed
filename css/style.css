@@ -46,6 +46,10 @@ body {
 
 .container {
     background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
 }
 
 .header,
@@ -63,7 +67,7 @@ body {
 .slogan,
 .footer {
     width: 940px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     
 }
 
@@ -78,27 +82,18 @@ body {
 
 /* 메인 콘텐츠 */
 
+
 .main {
     background-color: blue;
-    padding: 30px 15px;
-    /* overflow: hidden; */    /*<-clearfix 대체 방법*/
     min-height: 450px;
+    padding: 30px 30px;
+    justify-content: center;
+    display: flex;                     /*<-   flex 를 사용하여 */
+    flex-flow: row nowrap;             /*    float 한 것과    */
+    justify-content: space-between;   /*    같게            */
+    align-items: flex-start;         /*    구현          ->*/
 }
 
-
-.clearfix::after{
-    content: "";   /*<- content: "상자" : 가상 컨텐츠이기 때문에 포커스 안잡힌다. */
-    background-color: yellow;
-    display: block;
-    clear: both;    
-       /*<-clear는 block요소에만 움직인다.*/
-}   
-
-.group {
-    float: left;/*1번 방법*/
-    /* felx, grid <- 2번 방법  */
-    margin: 0 15px;
-}
 
 .group1 {
     background-color: pink;
@@ -128,6 +123,10 @@ body {
 
 .footer-bg {
     background-color: purple;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .footer {
