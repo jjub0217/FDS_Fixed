@@ -24,10 +24,12 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
+ /*<- 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 지금은 박스사이징만 필요한 시점이야!!*/
+}  
 
-/* ::before : first
-    ::after : child  */
+/* ::before : first child
+    ::after : last child  */
 html {
     font-size: 10px;
 }
@@ -78,18 +80,19 @@ body {
 
 .main {
     background-color: blue;
-    /* padding: 0px 15px; */
     padding: 30px 15px;
-    overflow: hidden;
+    /* overflow: hidden; */    /*<-clearfix 대체 방법*/
     min-height: 450px;
 }
 
-/* 
+
 .clearfix::after{
-    content: "";
+    content: "";   /*<- content: "상자" : 가상 컨텐츠이기 때문에 포커스 안잡힌다. */
+    background-color: yellow;
     display: block;
-    clear: both;
-} */
+    clear: both;    
+       /*<-clear는 block요소에만 움직인다.*/
+}   
 
 .group {
     float: left;/*1번 방법*/
@@ -105,16 +108,19 @@ body {
 
 .group2 {
     background-color: lightgreen;
-    /* float: left; */
     width: 380px;
 }
 
 .group3 {
     background-color: coral;
-    /* float: left; */
     width: 190px;
 }
 
+/* .clearfix{
+    /* height: 50px; 
+    /* background-color: rgba(255, 255, 0, 0.5); 
+    clear: both;
+} */
 .slogan {
     background-color: orange;
 
