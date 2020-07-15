@@ -13,18 +13,117 @@
 
 /* woff2 : 최신 웹폰트 */
 
-@import url(./normalize.css);/*<- 가져오기 선언할때 사용하는 명령어 : import
+@import url(./normalize.css);
+/*<- 가져오기 선언할때 사용하는 명령어 : import
                                 normalize.css 스타일 : 노멀하게 만들어주는 css 파일
                                 @ 기호 붙는 속성은 문서 제일 위에 선언해줘야 한다.*/
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); /*<- spoqa_han_sans : 구글하고 어도비가 합작해서 만든 font(아시아를 위한 폰트: 본고딕체)이다.*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
-html{
+/*<- spoqa_han_sans : 구글하고 어도비가 합작해서 만든 font(아시아를 위한 폰트: 본고딕체)이다.*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ::before : first
+    ::after : child  */
+html {
     font-size: 10px;
 }
-body{
+
+body {
     font-size: 1.6rem;
     color: #181818;
     background-color: #fff;
     font-family: 'Spoqa Han Sans';
-    font-weight: 400px;
+    font-weight: 400;
+}
+
+/* 레이아웃 */
+
+.container {
+    background-color: #fff;
+}
+
+.header,
+.visual,
+.slogan,
+.footer {
+
+}
+
+.main {}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.header {
+    background-color: yellow;
+}
+
+.visual {
+    background-color: lime;
+    height: 120px;
+}
+
+/* 메인 콘텐츠 */
+
+.main {
+    background-color: blue;
+    /* padding: 0px 15px; */
+    padding: 30px 15px;
+    overflow: hidden;
+    min-height: 450px;
+}
+
+/* 
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.group {
+    float: left;/*1번 방법*/
+    /* felx, grid <- 2번 방법  */
+    margin: 0 15px;
+}
+
+.group1 {
+    background-color: pink;
+    width: 250px;
+
+}
+
+.group2 {
+    background-color: lightgreen;
+    /* float: left; */
+    width: 380px;
+}
+
+.group3 {
+    background-color: coral;
+    /* float: left; */
+    width: 190px;
+}
+
+.slogan {
+    background-color: orange;
+
+}
+
+.footer-bg {
+    background-color: purple;
+}
+
+.footer {
+    background-color: skyblue;
 }

@@ -1,21 +1,21 @@
 <!-- 네이밍 사용방법 
-        1. id : 고유한 이름이어야 함. (#)
-        2. class : 중복되는 이름 사용 가능 (.)
-            - 네이밍 컨벤션 
-                1. 파스칼케이스 : "MainContent"
-                2. 카멜케이스 : "mainContent"
-                3. 케밥케이스 : "main-content"
-                4. 스네이크케이스 : "main_content"
-            - 클래스 네이밍 컨벤션
-                1. BEM(Block, Element, Modifier) : 어떤 Block 인지 알수 있게끔 설정
-                    ex) .loginform__username .login__username--error{
-                        }
-                2. SMACSS
-                3. OOCSS -->
+		1. id : 고유한 이름이어야 함. (#)
+		2. class : 중복되는 이름 사용 가능 (.)
+			- 네이밍 컨벤션 
+				1. 파스칼케이스 : "MainContent"
+				2. 카멜케이스 : "mainContent"
+				3. 케밥케이스 : "main-content"
+				4. 스네이크케이스 : "main_content"
+			- 클래스 네이밍 컨벤션
+				1. BEM(Block, Element, Modifier) : 어떤 Block 인지 알수 있게끔 설정
+					ex) .loginform__username .login__username--error{
+						}
+				2. SMACSS
+				3. OOCSS -->
 
 <!--1. External 방식
-    2. Embedded 방식
-    3. Inline 방식  -->
+	2. Embedded 방식
+	3. Inline 방식  -->
 
 <!-- type="text/css" : HTML5 에서는 생략가능 -->
 
@@ -24,24 +24,26 @@
 <html lang="ko-KR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>웹카페-HTML5, CSS3, 웹표준, 웹접근성</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<meta charset="UTF-8">
+	<title>웹카페-HTML5, CSS3, 웹표준, 웹접근성</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">header</header>
-        <div class="visual">visual</div>
-        <main class="main">메인콘텐츠
-            <div class="group group1">group1</div>
-            <div class="group group2">group2</div>
-            <div class="group group3">group3</div>
-        </main>
-        <article class="slogan_ footer-bg">slogan
-            <footer class="footer">footer</footer>
-        </article>
-    </div>
+	<div class="container">
+		<header class="header">header</header>
+		<div class="visual">visual</div>
+		<main class="main clearfix">
+			<div class="group group1">group1</div>
+			<div class="group group2">group2</div>
+			<div class="group group3">group3</div>
+		</main>
+		<article class="slogan">slogan
+		</article>
+				<div class="footer-bg">
+					<footer class="footer">footer</footer>
+				</div>
+
 </body>
 
 </html>
