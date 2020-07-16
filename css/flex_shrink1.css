@@ -1,0 +1,18 @@
+.wrapper{
+    background-color: yellow;
+    border: 5px solid blue;
+    width: 1000px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.wrapper div {
+    border: 1px solid red;
+    background-color: pink;
+    height: 50px;
+    width: 200px;
+}
+
+/* 부모요소에 display flex 주고, flex-flow 를 nowrap 주면
+자동으로 shrink 가 1로 적용되어 축소되서 
+1000px 안에 200px 의 컨텐트가 다 들어갈수 있게 된다.   */
