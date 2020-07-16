@@ -175,7 +175,7 @@ a {
                                 float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
                                 그래서 position absolute 를 준것이다.*/
     display: none;
-}
+} 
 
 .btn-menu {
     background-color: transparent;
