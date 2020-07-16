@@ -11,7 +11,7 @@
     어서 스타일 = 제작자 스타일
     유저 스타일 = 사용자 스타일 */
 
-/* woff2 : 최신 웹폰트 */ 
+/* woff2 : 최신 웹폰트 */
 
 @import url(./normalize.css);
 /*<- 가져오기 선언할때 사용하는 명령어 : import
@@ -24,9 +24,9 @@
 *::before,
 *::after {
     box-sizing: border-box;
- /*<- 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+    /*<- 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
 content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 지금은 박스사이징만 필요한 시점이야!!*/
-}  
+}
 
 /* ::before : first child
     ::after : last child  */
@@ -35,17 +35,24 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #181818;
     background-color: #fff;
     font-family: 'Spoqa Han Sans';
     font-weight: 400;
 }
 
+/* 링크 스타일 */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* 레이아웃 */
 
 .container {
-    background-color: #fff;
+    background-color: #ccc;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -60,12 +67,62 @@ body {
 .footer {
     width: 940px;
     /* margin: 0 auto; */
-    
+
 }
 
+
+/* 헤더 */
+
 .header {
-    background-color: yellow;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px 0 30px;
+    position: relative;
+
 }
+
+/* 로고 */
+
+.logo {
+    /* background-color: blue; */
+    position: absolute;
+    /*<- logo의 절대 기준은 header가 되었다. */
+    top: 45px;
+    left: 65px;
+}
+
+/* 멤버링크 */
+
+.member {
+    /* background-color: yellow; */
+    list-style: none;
+    padding-left: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: -8px;
+    font-size: 0;
+    text-align: right;
+}
+
+.member li,
+.member a {
+    display: inline-block;
+
+}
+
+.member li {
+    font-size: 1.4rem;
+}
+
+
+
+.member a {
+    text-transform: uppercase;
+    /* background-color: #fctf; */
+    padding: 2px 8px 2px 3px;
+
+}
+
 
 .visual {
     background-color: lime;
@@ -80,10 +137,14 @@ body {
     min-height: 450px;
     padding: 30px 30px;
     justify-content: center;
-    display: flex;                     /*<-   flex 를 사용하여 */
-    flex-flow: row nowrap;             /*    float 한 것과    */
-    justify-content: space-between;   /*    같게            */
-    align-items: flex-start;         /*    구현          ->*/
+    display: flex;
+    /*<-   flex 를 사용하여 */
+    flex-flow: row nowrap;
+    /*    float 한 것과    */
+    justify-content: space-between;
+    /*    같게            */
+    align-items: flex-start;
+    /*    구현          ->*/
 }
 
 
