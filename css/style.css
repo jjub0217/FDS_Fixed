@@ -294,39 +294,79 @@ a {
 .sub-menu6 {
     display: none;
 }
- 
+
 /* 비주얼 */
 @keyframes textAni {
+
     /*<- 각각의 프레임을 만드는 개념*/
     0% {
         font-size: 12px;
         color: rgba(0, 0, 0, 0);
-        padding-top: 0;
-        padding-left: 0;
+        transform: translate(0, 0);
     }
 
     100% {
         font-size: 24px;
         color: rgba(0, 0, 0, 1);
-        padding-top: 75px;
-        padding-left: 400px;
+        transform: translate(400px, 75px);
     }
+
     /* 0%, 100% <- 애니메이션이 바뀌는 시점 */
 }
+
 /* <- 하나의 애니메이션이 선언된 것이다. */
 
+@keyframes bgAni {
+0%{
+opacity: 1;
+}
+100%{
+opacity: 0;
+}
+}
 
 .visual {
     /* background-color: lime; */
     height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    animation: bgAni 2000ms ease-in-out infinite alternate;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.visual::before {
+    background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+    /*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
+    덮어쓰여지기 때문에 개별속성 써야 한다.*/
+    background-position: 0 -10px, 670px 0;
+}
+.visual::after {
+    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+    /*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
+    덮어쓰여지기 때문에 개별속성 써야 한다.*/
+    background-position: 300px 0, 800px 20px;
+    animation-delay: 1000ms;
 }
 
 .visual-text {
-    background-color: yellow;
+    /* background-color: yellow; */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.4rem;/*<- 24px*/
-    animation-name: textAni;
+    font-size: 2.4rem;
+    /*<- 24px*/
+    /* animation-name: textAni;
     animation-duration: 5s;
+    animation-fill-mode: forwards; */
+    animation: textAni 500ms ease-in-out forwards;
+    width: 500px;
 }
 
 /* 메인 콘텐츠 */
