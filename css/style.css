@@ -20,6 +20,10 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 /*<- spoqa_han_sans : 구글하고 어도비가 합작해서 만든 font(아시아를 위한 폰트: 본고딕체)이다.*/
+
+/* @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); */
+@import url(./fontello.css);
+
 *,
 *::before,
 *::after {
@@ -30,6 +34,8 @@ content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^
 
 /* ::before : first child
     ::after : last child  */
+
+
 html {
     font-size: 10px;
 }
@@ -45,7 +51,7 @@ body {
 /* 숨김 컨텐츠 */
 
 .a11y-hidden {
-    /* background-color: red; */
+    background-color: red;
     position: absolute;
     width: 1px;
     height: 1px;
@@ -141,41 +147,32 @@ a {
 /* 메인 메뉴 */
 
 .menu {
-    background:#db5629 linear-gradient(
-        to bottom,
-         #ef960f 0%,
-         #db5629 35%,
-         #db5629 70%,
-         #ef962f 100%,
-         #ef960f 100%);
+    background: #db5629 linear-gradient(to bottom,
+            #ef960f 0%,
+            #db5629 35%,
+            #db5629 70%,
+            #ef962f 100%,
+            #ef960f 100%);
     padding-left: 0;
     list-style: none;
-    margin: 0 0 50px;
+    margin: 0 0 35px;
     padding-left: 225px;
     border-top: 2px solid #000;
     border-radius: 0 0 5px 5px;
+    height: 50px;
 }
 
-.menu::after {
+/* .menu::after {
     content: "";
     display: block;
     clear: both;
-}
+} */
 
 .menu-item {
     float: left;
     /* background-color: blue; */
+    position: relative;
 }
-
-.sub-menu {
-    background-color: pink;
-    position: absolute;
-    /*<- absolute + offset 을 줄때만 position relative 와 연관되어 배치가 이동되어 움직여지는 것이다.
-                                그래서 position absolute 를 준것이고, absolute 를 안주면 sub-menu의 width 값까지 차지해서 
-                                float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
-                                그래서 position absolute 를 준것이다.*/
-    display: none;
-} 
 
 .btn-menu {
     background-color: transparent;
@@ -183,9 +180,11 @@ a {
     font-size: 1.6rem;
     font-weight: 700;
     border: 0;
+    line-height: 48px;
     border-left: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
     /*<- firefox 에서는 font 렌더링되면 font 가 조금 넒어지는 경우가 있기때문에..*/
+    padding: 0px 20px;
     cursor: pointer;
     text-shadow:
         1px 0 0 #000,
@@ -194,9 +193,101 @@ a {
         0 -1px 0 #000;
 }
 
-.btn-menu:hover{
-    color:yellow ;
+.menu-act .btn-menu {
+    color: #ff0;
 }
+
+.menu-act .btn-menu::after {
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+    /* margin-top: 15px; */
+    /* position: relative;
+    top: 2px; */
+}
+
+.sub-menu {
+    /* background-color: pink; */
+    position: absolute;
+    /*<- absolute + offset 을 줄때만 position relative 와 연관되어 배치가 이동되어 움직여지는 것이다.
+                                그래서 position absolute 를 준것이고, absolute 를 안주면 sub-menu의 width 값까지 차지해서 
+                                float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
+                                그래서 position absolute 를 준것이다.*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+
+/* .sub-menu:hover {
+    color: red;
+} */
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a {
+    /* background: yellow; */
+    padding: 8px 0;
+    margin-right: 1em;
+}
+
+.sub-menu a::before {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before 
+{
+    content: '\e800';
+
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+    left: 0;
+}
+
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+    right: 0;
+}
+
+.sub-menu1 {
+    display: block;
+}
+
+.sub-menu2 {
+    display: none;
+}
+
+.sub-menu3 {
+    display: none;
+}
+
+.sub-menu4 {
+    display: none;
+}
+
+.sub-menu5 {
+    display: none;
+}
+
+.sub-menu6 {
+    display: none;
+}
+
 .visual {
     background-color: lime;
     height: 120px;
