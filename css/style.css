@@ -96,7 +96,7 @@ a {
 .member {
     /* background-color: yellow; */
     list-style: none;
-    padding-left: 4px;
+    padding-left: 0px;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: -8px;
@@ -118,7 +118,7 @@ a {
 
 .member a {
     text-transform: uppercase;
-    /* background-color: #fctf; */
+    /* background-color: #ff; */
     padding: 2px 8px 2px 3px;
 
 }
@@ -136,7 +136,6 @@ a {
     background-color: blue;
     min-height: 450px;
     padding: 30px 30px;
-    justify-content: center;
     display: flex;
     /*<-   flex 를 사용하여 */
     flex-flow: row nowrap;
