@@ -111,11 +111,11 @@ body {
     width: 190px;
 }
 
-/* .clearfix{
-    /* height: 50px; 
-    /* background-color: rgba(255, 255, 0, 0.5); 
+ .clearfix{
+     /* height: 50px; 
+     background-color: rgba(255, 255, 0, 0.5);  */
     clear: both;
-} */
+} 
 .slogan {
     background-color: orange;
 
@@ -127,6 +127,8 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    /* flex-flow: row nowrap;
+    justify-content: center; */
 }
 
 .footer {
