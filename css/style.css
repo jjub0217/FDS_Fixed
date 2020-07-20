@@ -55,12 +55,13 @@ body {
     position: absolute;
     width: 1px;
     height: 1px;
-    overflow: hidden;
-    margin: -1px;
-    /* <- text-indent 를 쓰면 안되나요? */
+    overflow: hidden;    /* <- text-indent 를 쓰면 안되나요? */
+    margin: -1px;        /* <- 브라우저 화면에서 이동시키기 보다 
+                        제자리 위치를 지키게끔 하는게 좋은 방법이다.*/
+
     clip-path: polygon(0 0, 0 0, 0 0);
-    /* <- 브라우저 화면에서 이동시키기 보다 
-                                            제자리 위치를 지키게끔 하는게 좋은 방법이다.*/
+   
+                                            
 }
 
 
@@ -120,7 +121,7 @@ a {
 .member {
     /* background-color: yellow; */
     list-style: none;
-    padding-left: 4px;
+    padding-left: 0px;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: -8px;
