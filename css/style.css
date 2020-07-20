@@ -421,8 +421,8 @@ opacity: 0;
 }
 
 .login-heading{
-    margin: 0;
-    color: rgb(230, 230, 5);
+    margin-top: 0;
+    color: #ff0;
     font-size: 1.5rem;
     font-weight: 700;
     padding-left: 10px;
@@ -433,16 +433,13 @@ opacity: 0;
     background: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    /* padding: 10px; */
-    
+    padding: 10px 10px 0 10px;
 }
 
 .login-form fieldset{
     border: 0;
     margin: 0;
-    padding: 10px;
-    margin-top: 10px;
-    padding-top: 10px;
+    padding: 0;
     position: relative;   /*<- login 에 relative 주면 그만큼 top 좌표가 늘어나게 되서 계산하기 힘들어진다. */
     padding-bottom: 5px;
     border-bottom: 1px solid #aaa;
@@ -450,6 +447,8 @@ opacity: 0;
 
 .login-form div {
     margin-bottom: 5px;
+    /* width: 150px; */
+    /* background-color:yellow; */
 }
 
 .login-form label {
@@ -478,8 +477,6 @@ opacity: 0;
     padding: 0;
     top: 0;
     right: 0;
-    /* top: 10px;
-    left: 168px; */
 }
 
 .member-only {
@@ -489,7 +486,7 @@ opacity: 0;
     list-style: none;
     border-bottom-left-radius: 5px; 
     border-bottom-right-radius: 5px; 
-    padding-top: 10px;
+    padding: 10px;
     /* display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
