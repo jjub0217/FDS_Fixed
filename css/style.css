@@ -387,7 +387,7 @@ opacity: 0;
 }
 
 .group1 {
-    background-color: pink;
+    /* background-color: pink; */
     width: 250px;
 
 }
@@ -407,6 +407,125 @@ opacity: 0;
     /* background-color: rgba(255, 255, 0, 0.5); 
     clear: both;
 } */
+
+
+
+/* 로그인 */
+
+.login {
+    background: #db5629;
+    background-image: radial-gradient(circle at right top, #ef962f,  #db5629);
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 #ccc;
+    padding: 10px;
+}
+
+.login-heading{
+    margin: 0;
+    color: rgb(230, 230, 5);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 10px;
+    
+}
+
+.login-form{
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* padding: 10px; */
+    
+}
+
+.login-form fieldset{
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;   /*<- login 에 relative 주면 그만큼 top 좌표가 늘어나게 되서 계산하기 힘들어진다. */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+.login-form div {
+    margin-bottom: 5px;
+}
+
+.login-form label {
+    display: inline-block;
+    width: 55px;
+}
+
+.login-form input {
+    width: 96px;
+    height: 24px;
+    border: 1px solid rgb(27, 13, 13);
+    padding: 1px 1px 1px 0.5em;  /*input창 의 padding*/
+}
+
+.btn-login {
+    width: 50px;
+    height: 52px;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    background: #db5629;
+    font-size: 1.3rem;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+    /* top: 10px;
+    left: 168px; */
+}
+
+.member-only {
+    margin: 0;
+    background: white;
+    padding-left: 0;
+    list-style: none;
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    padding-top: 10px;
+    /* display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    clear: both; */
+
+}
+
+.member-only li:first-of-type{
+    float: left;
+}
+.member-only li:last-of-type{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.member-only a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.member-only a::before{
+    content: '\e803';
+    font-family: 'fontello';   
+    display: inline-block;
+    margin-right: .2em;
+    text-align: center;
+    color: #db5629;
+}
+
 .slogan {
     background-color: orange;
 }
@@ -421,4 +540,3 @@ opacity: 0;
 
 .footer {
     background-color: skyblue;
-}
