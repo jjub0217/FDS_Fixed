@@ -700,16 +700,23 @@ clear: both;
 /*teacher coed*/ 
 /*
 .term-list-subject{
-    margin-left: 5px;
     color: #296897
 }
 */
 /*
-.term-list-subject, .term-list-brief {
+.odd .term-list-subject, .odd .term-list-brief {
     background: lime;
     width: 145px;
     float: right;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
+} */
+
+/* 
+.even .term-list-subject, .even .term-list-brief {
+    background: lime;
+    width: 145px;
+    float: left;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
 } 
+ */
 
 
 
@@ -731,13 +738,17 @@ clear: both;
 
 /* teacher code */
 /* 
-.term-list-thumbnail {
+.odd .term-list-thumbnail {
     background-color: orange;
     margin-left: 0;
     float: left;  /*- 나는 position absolute 했는데 강사님은 float 를 주었다.
 } 
 */
-
+/* 
+.even .term-list-thumbnail {
+   float: right;    /*- 나는 position absolute 했는데 강사님은 float 를 주었다.
+}
+ */
 
 
 /* ------------------------------------ */
@@ -754,7 +765,7 @@ clear: both;
 /* 
 .term-list-brief{
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 5px;
 } 
 */
 
