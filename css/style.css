@@ -147,7 +147,7 @@ a {
 
 .member a {
     text-transform: uppercase;
-    /* background-color: #fctf; */
+    /* background-color: #fcf; */
     padding: 2px 8px 2px 3px;
 }
 
@@ -387,7 +387,7 @@ opacity: 0;
 }
 
 .group1 {
-    /* background-color: pink; */
+    background-color: pink;
     width: 250px;
 
 }
@@ -418,6 +418,8 @@ opacity: 0;
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 #ccc;
     padding: 10px;
+    /* width: 245px; */
+    width: calc(100% -5px);
 }
 
 .login-heading{
@@ -525,6 +527,52 @@ opacity: 0;
     color: #db5629;
 }
 
+/* 유효성 검사 배너 링크 */
+.validation-list{
+    background: yellow;
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.validation-list a {
+    /* display: block; */
+    display: block;
+    /* height: 30px; */
+    padding: 8px 10px 8px 45px;
+    /* margin-bottom: 12px; */
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    background-color: #ccc;
+    /* background: #ccc; */
+    background-image: url(./images/validation_icon.png),
+    linear-gradient(180deg, #ccc, #eee);
+    background-repeat: no-repeat;
+    background-position: 15px 50%, 0 0;/**/
+    /* text-align: center; */
+    /* text-indent: 20px; */
+}
+
+
+.validation-list a:hover {
+    color: #f00;
+    /* background: blue; */
+    /* text-indent: 20px; */
+     
+    /* padding: 5px; */
+   /* margin-bottom: 60px; */
+}
+
+
+
+
+
+
+
+
+/* 슬로건 */
 .slogan {
     background-color: orange;
 }
