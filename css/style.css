@@ -154,8 +154,8 @@ a {
             #db5629 70%,
             #ef962f 100%,
             #ef960f 100%);
-    padding-left: 0;
     list-style: none;
+    padding-left: 0;
     margin: 0 0 35px;
     padding-left: 225px;
     border-top: 2px solid #000;
@@ -182,7 +182,7 @@ a {
     font-weight: 700;
     border: 0;
     line-height: 48px;
-    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 1);
     /* padding: 15px 20px; */
     /*<- firefox 에서는 font 렌더링되면 font 가 조금 넒어지는 경우가 있기때문에..*/
     padding: 0px 20px;
