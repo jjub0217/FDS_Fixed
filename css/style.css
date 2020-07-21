@@ -84,9 +84,9 @@ a {
 
 .container {
     /* background-color: #ccc; */
-    display: flex;
+    /* display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: center; */
 
 }
 
@@ -96,8 +96,8 @@ a {
 .slogan,
 .footer {
     width: 940px;
-    /* margin: 0 auto; */
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -106,7 +106,7 @@ a {
 .header {
     background-color: #fff;
     border-radius: 0 0 15px 15px;
-    padding: 0 30px 0 30px;
+    padding: 1px 30px;
     position: relative;
 
 }
@@ -372,7 +372,9 @@ opacity: 0;
 /* 메인 콘텐츠 */
 
 .main {
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
     min-height: 450px;
     padding: 30px 30px;
     justify-content: center;
@@ -387,18 +389,18 @@ opacity: 0;
 }
 
 .group1 {
-    background-color: pink;
+    /* background-color: pink; */
     width: 250px;
 
 }
 
 .group2 {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     width: 380px;
 }
 
 .group3 {
-    background-color: coral;
+    /* background-color: coral; */
     width: 190px;
 }
 
@@ -419,7 +421,7 @@ opacity: 0;
     box-shadow: 5px 5px 0 0 #ccc;
     padding: 10px;
     /* width: 245px; */
-    width: calc(100% -5px);
+    width: calc(100% - 5px);
 }
 
 .login-heading{
@@ -459,7 +461,7 @@ opacity: 0;
 }
 
 .login-form input {
-    width: 96px;
+    width: 90px;
     height: 24px;
     border: 1px solid rgb(27, 13, 13);
     padding: 1px 1px 1px 0.5em;  /*input창 의 padding*/
@@ -528,8 +530,9 @@ opacity: 0;
 }
 
 /* 유효성 검사 배너 링크 */
+
 .validation-list{
-    background: yellow;
+    /* background: yellow; */
     list-style: none;
     margin-top: 25px;
     margin-bottom: 0;
@@ -537,11 +540,13 @@ opacity: 0;
 }
 
 .validation-list a {
-    /* display: block; */
+    /* ┌ display: block; */
     display: block;
-    /* height: 30px; */
-    padding: 8px 10px 8px 45px;
-    /* margin-bottom: 12px; */
+    /* ┌ height: 30px; */
+    /* │ text-indent: 20px; */
+    /* │ text-align: center; */
+    padding: 8px 10px 8px 40px;
+    /* ┌ margin-bottom: 12px; */
     margin-top: 10px;
     border: 1px solid #aaa;
     border-radius: 20px;
@@ -549,28 +554,213 @@ opacity: 0;
     /* background: #ccc; */
     background-image: url(./images/validation_icon.png),
     linear-gradient(180deg, #ccc, #eee);
-    background-repeat: no-repeat;
-    background-position: 15px 50%, 0 0;/**/
-    /* text-align: center; */
-    /* text-indent: 20px; */
+    background-repeat: no-repeat, repeat;
+    background-position: 15px 50%, 0 0; /* <- image 의 위치를 잡아주는 효과*/
 }
+/* .validation-list a::before{
+    content:"";
+    display: inline-block;  /*<- 이미지랑 text 랑 나란히 정렬하기 위해서 inline-block 으로 해야 한다.*/
+/*  width: 20px;
+    height: 20px;
+    background-image: url(./images/validation_icon.png);
+} */
 
+/* └> 그리고 이렇게 하려면 before 의 요소박스와 text 박스와의 정렬을 높이를 나란히 정렬하기 위해서
+vertical-align middle 을 줘야 한다. 
+            ===> text-align 은 block 요소에 주는것이고,
+                 vertical-align 은 inline 요소에 줘야하는 것이므로 
+                 vertical-align 주려면 display block 으로 바꾼 a 한테 주면 안되고
+                 before 로 만든 가상 요소 박스에 줘야 한다.*/
 
 .validation-list a:hover {
     color: #f00;
-    /* background: blue; */
-    /* text-indent: 20px; */
-     
-    /* padding: 5px; */
-   /* margin-bottom: 60px; */
+}
+
+/* 웹 관련 용어 */
+
+/* ----------------------------------------------------- */
+
+
+
+/* my code */
+.term {
+    /* background: yellow; */
+    background: linear-gradient(180deg, #ccc, #eee);;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* teacher code */
+/* 
+.term {
+    background: linear-gradient(180deg, #ccc, #eee);;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+} 
+*/
+
+
+/* ------------------------------------------------------- */
+
+.term-heading, 
+.term-list,
+.term-list-thumbnail,
+.term-list-brief
+{
+    margin: 0;
+    padding: 0;
 }
 
 
+/* ----------------------------------- */
 
 
 
 
+/* my code */
+.term-heading{
+    /* background: skyblue; */
+    font-size: 1.6rem;
+    font-weight: 700; /*<- 내가 생각해내지 못했던 코드*/
+}
 
+/* teacher code*/
+/*
+.term-heading {
+    background-color: yellow;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+ */
+
+
+
+/* ----------------------------------- */
+
+
+
+/*teacher code*/ 
+/* 
+.term-list{
+    margin-top: 10px;
+    margin-bottom: 0;
+} 
+*/
+
+/* 
+.term-list > div{
+    margin-top: 10px;
+    background: yellow;
+}
+ */
+
+/*
+ .term-list > div::after {
+content: "";
+display: block;
+clear: both;
+} 
+*/
+
+
+
+/* ------------------------------------------- */
+
+
+
+/* my code */
+.odd{
+    /* background-color: aquamarine; */
+    margin-top: 15px;
+    position: relative;
+    padding-left: 70px;
+}
+.even{
+    margin-top: 10px;
+    position: relative;
+    padding-right: 70px;
+}
+
+
+/* -------------------------------------------- */
+
+
+
+/* my code */
+.term-list-subject{
+    margin-left: 5px;
+    color: rgb(75, 174, 216);
+}
+
+/*teacher coed*/ 
+/*
+.term-list-subject{
+    margin-left: 5px;
+    color: #296897
+}
+*/
+/*
+.term-list-subject, .term-list-brief {
+    background: lime;
+    width: 145px;
+    float: right;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
+} 
+
+
+
+
+/* ------------------------------------- */
+
+
+/* my code */
+.odd .term-list-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.even .term-list-thumbnail {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* teacher code */
+/* 
+.term-list-thumbnail {
+    background-color: orange;
+    margin-left: 0;
+    float: left;  /*- 나는 position absolute 했는데 강사님은 float 를 주었다.
+} 
+*/
+
+
+
+/* ------------------------------------ */
+
+
+/* my code */
+.term-list-brief{
+    margin-top: 10px;
+    margin-left: 5px;
+    min-height: 50px;
+}
+
+/*teacher code  */
+/* 
+.term-list-brief{
+    margin-left: 0px;
+    margin-top: 10px;
+} 
+*/
+
+
+
+/* --------------------------------------- */
 
 /* 슬로건 */
 .slogan {
@@ -587,3 +777,4 @@ opacity: 0;
 
 .footer {
     background-color: skyblue;
+}
