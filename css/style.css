@@ -768,7 +768,9 @@ clear: both;
 
 /* 검색 폼 */
 
-
+.group2 {
+    width: 380px;
+}
 
 
 .search-form {
@@ -785,7 +787,7 @@ clear: both;
 }
 
 .search-form fieldset{
-    background-color: yellow;
+    /* background-color: yellow; */
     border: 0;
     margin: 0;
     padding: 0;
@@ -840,9 +842,73 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
     padding: 0 10px;
 }
 
-.group2 {
-    width: 380px;
+/* board */
+
+.board{
+    /* background: yellow; */
+    position: relative;
+    margin-top: 20px;
 }
+
+.board .tab-act  {
+    display: block;
+}
+
+
+.notice{
+    background: orange;
+}
+
+.notice-heading{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.notice-list{
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 25px;
+}
+
+
+.notice-list a {
+    /* float: left; */
+}
+.notice-list time {
+    /* float: right; */
+}
+
+.notice-list a::before {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+}
+
+
+.notice-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pds-heading{
+    margin: 0;
+    float: left;
+}
+.pds{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(218, 112, 214, 0.596);
+    /* position: absolute; */
+    top: 0;
+    left: 100px;
+    display: none;
+}
+
 
 .group3 {
     /* background-color: coral; */
