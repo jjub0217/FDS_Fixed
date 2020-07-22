@@ -394,15 +394,7 @@ opacity: 0;
 
 }
 
-.group2 {
-    /* background-color: lightgreen; */
-    width: 380px;
-}
 
-.group3 {
-    /* background-color: coral; */
-    width: 190px;
-}
 
 /* .clearfix{
     /* height: 50px; 
@@ -772,6 +764,92 @@ clear: both;
 
 
 /* --------------------------------------- */
+
+
+/* 검색 폼 */
+
+
+
+
+.search-form {
+    border: 1px solid #aaa;
+    /* ┌  = border-bottom: 0; */
+    border-bottom-color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+    background: #ccc linear-gradient(180deg, #ccc, #fff);
+    font-size: 1.4rem;
+    /* display: flex;  <- 여기다가 flex 주면 fieldset만 flex-item 이 되는 꼴이니까
+    여기에 flex 를 주면 안된다.*/
+
+}
+
+.search-form fieldset{
+    background-color: yellow;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* teacher code */
+/* ┌ form 같은 경우에 flex 가 안먹는다. 그래서 flex 를 주려고 하는 요소를
+div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽님들의 현답 */
+.search-form div[role="group"] {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-form label::before {
+    content: '\e802';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+}
+
+.search-form label {
+    font-size: 1.4rem;
+}
+
+.search-form label,
+.btn-search {
+    white-space: nowrap;
+}
+
+
+.search-form input[name="search"] {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 1px 1px 1px 5px;
+    height: 24px;
+    /* ┌ width: 190px; <- 대신에 flex-grow 주면 된다.*/
+    /* flex-grow: 1; */
+    width: 200px; /*<- firefox 와의 cross browsing 하려고 
+                        label 이랑 button 에 white-space: nowrap 한 후에 width 값을 주면 된다.;*/
+    margin: 0 5px;
+}
+
+.btn-search {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+    font-size: 1.3rem;
+    height: 24px;
+    padding: 0 10px;
+}
+
+.group2 {
+    width: 380px;
+}
+
+.group3 {
+    /* background-color: coral; */
+    width: 190px;
+}
+
+
 
 /* 슬로건 */
 .slogan {
