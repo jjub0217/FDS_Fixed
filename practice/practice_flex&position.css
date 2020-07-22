@@ -34,15 +34,16 @@ a {
 /* 숨김 컨텐츠*/
 
 .a11y-hidden{
-    background-color: yellow;
+    background-color: red;
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    /* 여기까진 이해 됨. 근데 이 이후에 왜 margin -1px 을 하는거고,
-    clip-path 는 왜 하는 거지? */
-    margin: -1px;
-    clip-path: polygon(0 0, 0 0, 0 0);
+    /* <- 여기까지 해서 "메인메뉴" 라는 텍스트틀 안보이게 하였고,
+    background color red 를 적용시킨 빨간점이 보이게 된다. */
+    margin: -1px;   /*<- -1px을 함으로써 navigation 의 맨 왼쪽 맨 위로 올렸다.*/
+    clip-path: polygon(0 0, 0 0, 0 0);  /*<- 이렇게 하면 하나의 점으로 만들어서 아예 요소를 안보이게 했다.
+    clip-path : "클리핑 범위 안의 부분은 보여지고, 바깥은 숨겨집니다" */
 }
 
 /* 레이아웃 */

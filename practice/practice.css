@@ -1,0 +1,184 @@
+@import url(../css/normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(../css/fontello.css);
+
+*,
+*::before,   /*  ::before : first child*/
+*::after {   /* ::after : last child  */
+    box-sizing: border-box;
+}
+ /* └> 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+        content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 
+        지금은 박스사이징만 필요한 시점이야!!*/
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    background: #cccccc;
+    color: #181818;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 숨김 컨텐츠 */
+
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    display: block;
+
+}
+/* 레이아웃 */
+
+.container {
+    /* background-color: orange; */
+    /* padding: 0 30px; */
+    
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10px; */
+}
+
+/* 헤더 */
+
+.header {
+    background: orchid;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 30px 40px;
+    position: relative;
+    /* height: 50px; */
+
+}
+
+.logo {
+    /* background-color: red; */
+    /* float: left; */
+    position: absolute;
+    /* margin-left: 20px; */
+    top: 30px;
+    left: 55px;
+
+}
+
+.member {
+    /* background-color: rebeccapurple; */
+    text-transform: uppercase;
+    list-style: none;
+    text-align: end;   
+    margin: 0;
+    padding: 0;
+    margin-bottom: 14px;
+    width: 887px;
+    /* font-size: 0; */
+}
+
+
+
+.member li,
+.member a{
+    display: inline-block;
+
+}
+/* └> li에도, a 에도 둘다한테 inline-block 을 줘야 하는 이유는
+부모요소인 li 가 block 요소라서, 그 자식요소의 a 에 inline-block 을 준다해도
+적용이 안된다. 
+그래서 부모요소인 li 에도, a 에도 둘다한테 inline-block 을 줘야 한다.*/
+
+.member a {
+    font-size: 1.4rem;
+    padding: 0 6px;
+    margin: 0;
+}
+.navigation {
+    background: salmon;
+    border-top: 1px solid #ccc;
+    height: 50px;
+    padding: 2px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.menu {
+    background-color: sienna;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: 215px;
+}
+
+.menu-item{
+    display: inline-block;
+    line-height: 48px;
+    /*color: #fff;  <-  왜 상속이 안되지?*/
+}
+
+.btn-menu {
+    color: #fff;/*<-  왜*/
+    border: 0;
+    border-left: 1px solid #ccc;
+    background-color: transparent;
+    padding: 0 18px;
+}
+
+.sub-menu {
+    display: none;
+} 
+.visual {
+    background: yellow;
+}
+
+.main {
+    background: tomato;
+}
+
+.group{
+    background: yellowgreen;
+}
+
+.group1 {
+    background: green;
+}
+.group2 {
+    background: skyblue;
+}
+.group1 {
+    background: pink;
+}
+
+.slogan {
+    background: slateblue;
+}
+
+.footer-bg {
+    background: steelblue;
+}
+
+.footer {
+    background-color: purple;
+}
+
+
+
+
