@@ -1,22 +1,22 @@
 /*@charset "utf-8"; /*<- html에서 utf-8 로 인코딩 하려고 하면 css 에서도 이렇게 선언해야 한다.
-                        하지만 최신 html 에서는 오히려 이걸 선언하면 에러가 날수도 있기 때문에 
-                        최근은 생략하고 있다.*/
+						하지만 최신 html 에서는 오히려 이걸 선언하면 에러가 날수도 있기 때문에 
+						최근은 생략하고 있다.*/
 
 /* RGB : RRGGBB 
-        - RR / GG /BB
-        - 16*16 = 256 / 16*16 = 256 / 16*16 = 256 
+		- RR / GG /BB
+		- 16*16 = 256 / 16*16 = 256 / 16*16 = 256 
 */
 
 /* 에이전트 스타일 = 브라우저 스타일
-    어서 스타일 = 제작자 스타일
-    유저 스타일 = 사용자 스타일 */
+	어서 스타일 = 제작자 스타일
+	유저 스타일 = 사용자 스타일 */
 
 /* woff2 : 최신 웹폰트 */
 
 @import url(./normalize.css);
 /*<- 가져오기 선언할때 사용하는 명령어 : import
-                                normalize.css 스타일 : 노멀하게 만들어주는 css 파일
-                                @ 기호 붙는 속성은 문서 제일 위에 선언해줘야 한다.*/
+								normalize.css 스타일 : 노멀하게 만들어주는 css 파일
+								@ 기호 붙는 속성은 문서 제일 위에 선언해줘야 한다.*/
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 /*<- spoqa_han_sans : 구글하고 어도비가 합작해서 만든 font(아시아를 위한 폰트: 본고딕체)이다.*/
@@ -29,64 +29,64 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    /*<- 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+	box-sizing: border-box;
+	/*<- 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
 content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 지금은 박스사이징만 필요한 시점이야!!*/
 }
 
 /* ::before : first child
-    ::after : last child  */
+	::after : last child  */
 
 
 html {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 body {
-    font-size: 1.4rem;
-    color: #181818;
-    /* background-color: #fff; */
-    background: url(./images/bg_flower.png) no-repeat 50% 0 scroll,
-        #fff linear-gradient(to bottom,
-            #ccc 0%,
-            #fff 70%,
-            #fff 100%);
-    /* <- 50% 0 : body 의 정중앙 50% 와, 이미지의 정중앙 50% 를 맞춰진다. */
-    font-family: 'Spoqa Han Sans';
-    font-weight: 400;
+	font-size: 1.4rem;
+	color: #181818;
+	/* background-color: #fff; */
+	background: url(./images/bg_flower.png) no-repeat 50% 0 scroll,
+		#fff linear-gradient(to bottom,
+			#ccc 0%,
+			#fff 70%,
+			#fff 100%);
+	/* <- 50% 0 : body 의 정중앙 50% 와, 이미지의 정중앙 50% 를 맞춰진다. */
+	font-family: 'Spoqa Han Sans';
+	font-weight: 400;
 }
 
 /* 숨김 컨텐츠 */
 
 .a11y-hidden {
-    background-color: red;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    margin: -1px;
-    /* <- text-indent 를 쓰면 안되나요? */
-    clip-path: polygon(0 0, 0 0, 0 0);
-    /* <- 브라우저 화면에서 이동시키기 보다 
-                                            제자리 위치를 지키게끔 하는게 좋은 방법이다.*/
+	background-color: red;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	margin: -1px;
+	/* <- text-indent 를 쓰면 안되나요? */
+	clip-path: polygon(0 0, 0 0, 0 0);
+	/* <- 브라우저 화면에서 이동시키기 보다 
+											제자리 위치를 지키게끔 하는게 좋은 방법이다.*/
 }
 
 
 /* 링크 스타일 */
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 
 /* 레이아웃 */
 
 .container {
-    /* background-color: #ccc; */
-    /* display: flex;
-    flex-flow: column nowrap;
-    align-items: center; */
+	/* background-color: #ccc; */
+	/* display: flex;
+	flex-flow: column nowrap;
+	align-items: center; */
 
 }
 
@@ -95,19 +95,19 @@ a {
 .main,
 .slogan,
 .footer {
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 /* 헤더 */
 
 .header {
-    background-color: #fff;
-    border-radius: 0 0 15px 15px;
-    padding: 1px 30px;
-    position: relative;
+	background-color: #fff;
+	border-radius: 0 0 15px 15px;
+	padding: 1px 30px;
+	position: relative;
 
 }
 
@@ -115,203 +115,203 @@ a {
 /* 로고 */
 
 .logo {
-    /* background-color: blue; */
-    position: absolute;
-    /*<- logo의 절대 기준은 header가 되었다. */
-    top: 26px;
-    left: 60px;
+	/* background-color: blue; */
+	position: absolute;
+	/*<- logo의 절대 기준은 header가 되었다. */
+	top: 26px;
+	left: 60px;
 }
 
 
 /* 멤버링크 */
 
 .member {
-    /* background-color: yellow; */
-    list-style: none;
-    padding-left: 4px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-right: -8px;
-    font-size: 0;
-    text-align: right;
+	/* background-color: yellow; */
+	list-style: none;
+	padding-left: 4px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: -8px;
+	font-size: 0;
+	text-align: right;
 }
 
 .member li,
 .member a {
-    display: inline-block;
+	display: inline-block;
 }
 
 .member li {
-    font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 .member a {
-    text-transform: uppercase;
-    /* background-color: #fcf; */
-    padding: 2px 8px 2px 3px;
+	text-transform: uppercase;
+	/* background-color: #fcf; */
+	padding: 2px 8px 2px 3px;
 }
 
 
 /* 메인 메뉴 */
 
 .menu {
-    background: #db5629 linear-gradient(to bottom,
-            #ef960f 0%,
-            #db5629 35%,
-            #db5629 70%,
-            #ef962f 100%,
-            #ef960f 100%);
-    padding-left: 0;
-    list-style: none;
-    margin: 0 0 35px;
-    padding-left: 225px;
-    border-top: 2px solid #000;
-    border-radius: 0 0 5px 5px;
-    height: 50px;
+	background: #db5629 linear-gradient(to bottom,
+			#ef960f 0%,
+			#db5629 35%,
+			#db5629 70%,
+			#ef962f 100%,
+			#ef960f 100%);
+	padding-left: 0;
+	list-style: none;
+	margin: 0 0 35px;
+	padding-left: 225px;
+	border-top: 2px solid #000;
+	border-radius: 0 0 5px 5px;
+	height: 50px;
 }
 
 /* .menu::after {
-    content: "";
-    display: block;
-    clear: both;
+	content: "";
+	display: block;
+	clear: both;
 } */
 
 .menu-item {
-    /* background-color: blue; */
-    float: left;
-    position: relative;
+	/* background-color: blue; */
+	float: left;
+	position: relative;
 }
 
 .btn-menu {
-    background-color: transparent;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 700;
-    border: 0;
-    line-height: 48px;
-    border-left: 2px solid rgba(255, 255, 255, 0.5);
-    /* padding: 15px 20px; */
-    /*<- firefox 에서는 font 렌더링되면 font 가 조금 넒어지는 경우가 있기때문에..*/
-    padding: 0px 20px;
-    cursor: pointer;
-    text-shadow:
-        1px 0 0 #000,
-        0 1px 0 #000,
-        -1px 0 0 #000,
-        0 -1px 0 #000;
+	background-color: transparent;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	border: 0;
+	line-height: 48px;
+	border-left: 2px solid rgba(255, 255, 255, 0.5);
+	/* padding: 15px 20px; */
+	/*<- firefox 에서는 font 렌더링되면 font 가 조금 넒어지는 경우가 있기때문에..*/
+	padding: 0px 20px;
+	cursor: pointer;
+	text-shadow:
+		1px 0 0 #000,
+		0 1px 0 #000,
+		-1px 0 0 #000,
+		0 -1px 0 #000;
 }
 
 .menu-act .btn-menu {
-    color: #ff0;
+	color: #ff0;
 }
 
 .menu-act .btn-menu::after {
-    content: "";
-    display: block;
-    background: #000;
-    height: 2px;
-    /* margin-top: 15px; */
-    /* position: relative;
-    top: 2px; */
+	content: "";
+	display: block;
+	background: #000;
+	height: 2px;
+	/* margin-top: 15px; */
+	/* position: relative;
+	top: 2px; */
 }
 
 .sub-menu {
-    /* background-color: pink; */
-    position: absolute;
-    /*<- absolute + offset 을 줄때만 position relative 와 연관되어 배치가 이동되어 움직여지는 것이다.
-                                그래서 position absolute 를 준것이고, absolute 를 안주면 sub-menu의 width 값까지 차지해서 
-                                float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
-                                그래서 position absolute 를 준것이다.*/
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    white-space: nowrap;
+	/* background-color: pink; */
+	position: absolute;
+	/*<- absolute + offset 을 줄때만 position relative 와 연관되어 배치가 이동되어 움직여지는 것이다.
+								그래서 position absolute 를 준것이고, absolute 를 안주면 sub-menu의 width 값까지 차지해서 
+								float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
+								그래서 position absolute 를 준것이다.*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
 }
 
 
 /* .sub-menu:hover { 
-    color: red;
+	color: red;
 } */
 
 .sub-menu li,
 .sub-menu a {
-    display: inline-block;
+	display: inline-block;
 }
 
 .sub-menu a {
-    /* background: yellow; */
-    padding: 8px 0;
-    margin-right: 1em;
+	/* background: yellow; */
+	padding: 8px 0;
+	margin-right: 1em;
 }
 
 .sub-menu a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    width: 1em;
-    margin-right: .2em;
-    margin-left: .2em;
+	content: '\f192';
+	font-family: 'fontello';
+	display: inline-block;
+	width: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
 }
 
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
-    content: '\e800';
+	content: '\e800';
 
 }
 
 .sub-menu1,
 .sub-menu2,
 .sub-menu3 {
-    left: 0;
+	left: 0;
 }
 
 .sub-menu4,
 .sub-menu5,
 .sub-menu6 {
-    right: 0;
+	right: 0;
 }
 
 .sub-menu1 {
-    display: block;
+	display: block;
 }
 
 .sub-menu2 {
-    display: none;
+	display: none;
 }
 
 .sub-menu3 {
-    display: none;
+	display: none;
 }
 
 .sub-menu4 {
-    display: none;
+	display: none;
 }
 
 .sub-menu5 {
-    display: none;
+	display: none;
 }
 
 .sub-menu6 {
-    display: none;
+	display: none;
 }
 
 /* 비주얼 */
 @keyframes textAni {
 
-    /*<- 각각의 프레임을 만드는 개념*/
-    0% {
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0);
-        transform: translate(0, 0);
-    }
+	/*<- 각각의 프레임을 만드는 개념*/
+	0% {
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0);
+		transform: translate(0, 0);
+	}
 
-    100% {
-        font-size: 24px;
-        color: rgba(0, 0, 0, 1);
-        transform: translate(400px, 75px);
-    }
+	100% {
+		font-size: 24px;
+		color: rgba(0, 0, 0, 1);
+		transform: translate(400px, 75px);
+	}
 
-    /* 0%, 100% <- 애니메이션이 바뀌는 시점 */
+	/* 0%, 100% <- 애니메이션이 바뀌는 시점 */
 }
 
 /* <- 하나의 애니메이션이 선언된 것이다. */
@@ -326,80 +326,80 @@ opacity: 0;
 }
 
 .visual {
-    /* background-color: lime; */
-    height: 120px;
-    position: relative;
+	/* background-color: lime; */
+	height: 120px;
+	position: relative;
 }
 
 .visual::before,
 .visual::after {
-    animation: bgAni 2000ms ease-in-out infinite alternate;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
+	animation: bgAni 2000ms ease-in-out infinite alternate;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
 }
 
 .visual::before {
-    background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
-    /*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
-    덮어쓰여지기 때문에 개별속성 써야 한다.*/
-    background-position: 0 -10px, 670px 0;
+	background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+	/*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
+	덮어쓰여지기 때문에 개별속성 써야 한다.*/
+	background-position: 0 -10px, 670px 0;
 }
 .visual::after {
-    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
-    /*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
-    덮어쓰여지기 때문에 개별속성 써야 한다.*/
-    background-position: 300px 0, 800px 20px;
-    animation-delay: 1000ms;
+	background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+	/*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
+	덮어쓰여지기 때문에 개별속성 써야 한다.*/
+	background-position: 300px 0, 800px 20px;
+	animation-delay: 1000ms;
 }
 
 .visual-text {
-    /* background-color: yellow; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.4rem;
-    /*<- 24px*/
-    /* animation-name: textAni;
-    animation-duration: 5s;
-    animation-fill-mode: forwards; */
-    animation: textAni 500ms ease-in-out forwards;
-    width: 500px;
+	/* background-color: yellow; */
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 2.4rem;
+	/*<- 24px*/
+	/* animation-name: textAni;
+	animation-duration: 5s;
+	animation-fill-mode: forwards; */
+	animation: textAni 500ms ease-in-out forwards;
+	width: 500px;
 }
 
 /* 메인 콘텐츠 */
 
 .main {
-    /* background-color: blue; */
-    background-color: #fff;
-    border-radius: 15px 15px 0 0;
-    min-height: 450px;
-    padding: 30px 30px;
-    justify-content: center;
-    display: flex;
-    /*<-   flex 를 사용하여 */
-    flex-flow: row nowrap;
-    /*    float 한 것과    */
-    justify-content: space-between;
-    /*    같게            */
-    align-items: flex-start;
-    /*    구현          ->*/
+	/* background-color: blue; */
+	background-color: #fff;
+	border-radius: 15px 15px 0 0;
+	min-height: 450px;
+	padding: 30px 30px;
+	justify-content: center;
+	display: flex;
+	/*<-   flex 를 사용하여 */
+	flex-flow: row nowrap;
+	/*    float 한 것과    */
+	justify-content: space-between;
+	/*    같게            */
+	align-items: flex-start;
+	/*    구현          ->*/
 }
 
 .group1 {
-    /* background-color: pink; */
-    width: 250px;
+	/* background-color: pink; */
+	width: 250px;
 
 }
 
 
 
 /* .clearfix{
-    /* height: 50px; 
-    /* background-color: rgba(255, 255, 0, 0.5); 
-    clear: both;
+	/* height: 50px; 
+	/* background-color: rgba(255, 255, 0, 0.5); 
+	clear: both;
 } */
 
 
@@ -407,165 +407,165 @@ opacity: 0;
 /* 로그인 */
 
 .login {
-    background: #db5629;
-    background-image: radial-gradient(circle at right top, #ef962f,  #db5629);
-    border-radius: 5px;
-    box-shadow: 5px 5px 0 0 #ccc;
-    padding: 10px;
-    /* width: 245px; */
-    width: calc(100% - 5px);
+	background: #db5629;
+	background-image: radial-gradient(circle at right top, #ef962f,  #db5629);
+	border-radius: 5px;
+	box-shadow: 5px 5px 0 0 #ccc;
+	padding: 10px;
+	/* width: 245px; */
+	width: calc(100% - 5px);
 }
 
 .login-heading{
-    margin-top: 0;
-    color: #ff0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding-left: 10px;
-    
+	margin-top: 0;
+	color: #ff0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding-left: 10px;
+	
 }
 
 .login-form{
-    background: #fff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 10px 10px 0 10px;
+	background: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 10px 10px 0 10px;
 }
 
 .login-form fieldset{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    position: relative;   /*<- login 에 relative 주면 그만큼 top 좌표가 늘어나게 되서 계산하기 힘들어진다. */
-    padding-bottom: 5px;
-    border-bottom: 1px solid #aaa;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;   /*<- login 에 relative 주면 그만큼 top 좌표가 늘어나게 되서 계산하기 힘들어진다. */
+	padding-bottom: 5px;
+	border-bottom: 1px solid #aaa;
 }
 
 .login-form div {
-    margin-bottom: 5px;
-    /* width: 150px; */
-    /* background-color:yellow; */
+	margin-bottom: 5px;
+	/* width: 150px; */
+	/* background-color:yellow; */
 }
 
 .login-form label {
-    display: inline-block;
-    width: 55px;
+	display: inline-block;
+	width: 55px;
 }
 
 .login-form input {
-    width: 90px;
-    height: 24px;
-    border: 1px solid rgb(27, 13, 13);
-    padding: 1px 1px 1px 0.5em;  /*input창 의 padding*/
+	width: 90px;
+	height: 24px;
+	border: 1px solid rgb(27, 13, 13);
+	padding: 1px 1px 1px 0.5em;  /*input창 의 padding*/
 }
 
 .btn-login {
-    /* display: none; */
-    width: 50px;
-    height: 52px;
-    border-radius: 3px;
-    border: 0;
-    padding: 5px;
-    color: white;
-    cursor: pointer;
-    background: #db5629;
-    font-size: 1.3rem;
-    position: absolute;
-    /* float: right; */
-    padding: 0;
-    top: 0;
-    right: 0;
+	/* display: none; */
+	width: 50px;
+	height: 52px;
+	border-radius: 3px;
+	border: 0;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+	background: #db5629;
+	font-size: 1.3rem;
+	position: absolute;
+	/* float: right; */
+	padding: 0;
+	top: 0;
+	right: 0;
 }
 
 .member-only {
-    margin: 0;
-    background: white;
-    padding-left: 0;
-    list-style: none;
-    border-bottom-left-radius: 5px; 
-    border-bottom-right-radius: 5px; 
-    padding: 10px;
-    /* display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-top: 10px;
-    clear: both; */
+	margin: 0;
+	background: white;
+	padding-left: 0;
+	list-style: none;
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	padding: 10px;
+	/* display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-top: 10px;
+	clear: both; */
 
 }
 
 .member-only li:first-of-type{
-    float: left;
+	float: left;
 }
 .member-only li:last-of-type{
-    float: right;
+	float: right;
 }
 
 .clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .member-only a{
-    padding-top: 5px;
-    padding-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .member-only a::before{
-    content: '\e803';
-    font-family: 'fontello';   
-    display: inline-block;
-    margin-right: .2em;
-    text-align: center;
-    color: #db5629;
+	content: '\e803';
+	font-family: 'fontello';   
+	display: inline-block;
+	margin-right: .2em;
+	text-align: center;
+	color: #db5629;
 }
 
 /* 유효성 검사 배너 링크 */
 
 .validation-list{
-    /* background: yellow; */
-    list-style: none;
-    margin-top: 25px;
-    margin-bottom: 0;
-    padding-left: 0;
+	/* background: yellow; */
+	list-style: none;
+	margin-top: 25px;
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
 .validation-list a {
-    /* ┌ display: block; */
-    display: block;
-    /* ┌ height: 30px; */
-    /* │ text-indent: 20px; */
-    /* │ text-align: center; */
-    padding: 8px 10px 8px 40px;
-    /* ┌ margin-bottom: 12px; */
-    margin-top: 10px;
-    border: 1px solid #aaa;
-    border-radius: 20px;
-    background-color: #ccc;
-    /* background: #ccc; */
-    background-image: url(./images/validation_icon.png),
-    linear-gradient(180deg, #ccc, #eee);
-    background-repeat: no-repeat, repeat;
-    background-position: 15px 50%, 0 0; /* <- image 의 위치를 잡아주는 효과*/
+	/* ┌ display: block; */
+	display: block;
+	/* ┌ height: 30px; */
+	/* │ text-indent: 20px; */
+	/* │ text-align: center; */
+	padding: 8px 10px 8px 40px;
+	/* ┌ margin-bottom: 12px; */
+	margin-top: 10px;
+	border: 1px solid #aaa;
+	border-radius: 20px;
+	background-color: #ccc;
+	/* background: #ccc; */
+	background-image: url(./images/validation_icon.png),
+	linear-gradient(180deg, #ccc, #eee);
+	background-repeat: no-repeat, repeat;
+	background-position: 15px 50%, 0 0; /* <- image 의 위치를 잡아주는 효과*/
 }
 /* .validation-list a::before{
-    content:"";
-    display: inline-block;  /*<- 이미지랑 text 랑 나란히 정렬하기 위해서 inline-block 으로 해야 한다.*/
+	content:"";
+	display: inline-block;  /*<- 이미지랑 text 랑 나란히 정렬하기 위해서 inline-block 으로 해야 한다.*/
 /*  width: 20px;
-    height: 20px;
-    background-image: url(./images/validation_icon.png);
+	height: 20px;
+	background-image: url(./images/validation_icon.png);
 } */
 
 /* └> 그리고 이렇게 하려면 before 의 요소박스와 text 박스와의 정렬을 높이를 나란히 정렬하기 위해서
 vertical-align middle 을 줘야 한다. 
-            ===> text-align 은 block 요소에 주는것이고,
-                 vertical-align 은 inline 요소에 줘야하는 것이므로 
-                 vertical-align 주려면 display block 으로 바꾼 a 한테 주면 안되고
-                 before 로 만든 가상 요소 박스에 줘야 한다.*/
+			===> text-align 은 block 요소에 주는것이고,
+				 vertical-align 은 inline 요소에 줘야하는 것이므로 
+				 vertical-align 주려면 display block 으로 바꾼 a 한테 주면 안되고
+				 before 로 만든 가상 요소 박스에 줘야 한다.*/
 
 .validation-list a:hover {
-    color: #f00;
+	color: #f00;
 }
 
 /* 웹 관련 용어 */
@@ -576,22 +576,22 @@ vertical-align middle 을 줘야 한다.
 
 /* my code */
 .term {
-    /* background: yellow; */
-    background: linear-gradient(180deg, #ccc, #eee);;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
+	/* background: yellow; */
+	background: linear-gradient(180deg, #ccc, #eee);;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 20px;
 }
 
 /* teacher code */
 /* 
 .term {
-    background: linear-gradient(180deg, #ccc, #eee);;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
+	background: linear-gradient(180deg, #ccc, #eee);;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 20px;
 } 
 */
 
@@ -603,8 +603,8 @@ vertical-align middle 을 줘야 한다.
 .term-list-thumbnail,
 .term-list-brief
 {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -615,18 +615,18 @@ vertical-align middle 을 줘야 한다.
 
 /* my code */
 .term-heading{
-    /* background: skyblue; */
-    font-size: 1.6rem;
-    font-weight: 700; /*<- 내가 생각해내지 못했던 코드*/
+	/* background: skyblue; */
+	font-size: 1.6rem;
+	font-weight: 700; /*<- 내가 생각해내지 못했던 코드*/
 }
 
 /* teacher code*/
 /*
 .term-heading {
-    background-color: yellow;
-    margin: 0;
-    font-size: 1.6rem;
-    font-weight: 700;
+	background-color: yellow;
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: 700;
 }
  */
 
@@ -639,15 +639,15 @@ vertical-align middle 을 줘야 한다.
 /*teacher code*/ 
 /* 
 .term-list{
-    margin-top: 10px;
-    margin-bottom: 0;
+	margin-top: 10px;
+	margin-bottom: 0;
 } 
 */
 
 /* 
 .term-list > div{
-    margin-top: 10px;
-    background: yellow;
+	margin-top: 10px;
+	background: yellow;
 }
  */
 
@@ -667,15 +667,15 @@ clear: both;
 
 /* my code */
 .odd{
-    /* background-color: aquamarine; */
-    margin-top: 15px;
-    position: relative;
-    padding-left: 70px;
+	/* background-color: aquamarine; */
+	margin-top: 15px;
+	position: relative;
+	padding-left: 70px;
 }
 .even{
-    margin-top: 10px;
-    position: relative;
-    padding-right: 70px;
+	margin-top: 10px;
+	position: relative;
+	padding-right: 70px;
 }
 
 
@@ -685,28 +685,28 @@ clear: both;
 
 /* my code */
 .term-list-subject{
-    margin-left: 5px;
-    color: rgb(75, 174, 216);
+	margin-left: 5px;
+	color: rgb(75, 174, 216);
 }
 
 /*teacher coed*/ 
 /*
 .term-list-subject{
-    color: #296897
+	color: #296897
 }
 */
 /*
 .odd .term-list-subject, .odd .term-list-brief {
-    background: lime;
-    width: 145px;
-    float: right;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
+	background: lime;
+	width: 145px;
+	float: right;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
 } */
 
 /* 
 .even .term-list-subject, .even .term-list-brief {
-    background: lime;
-    width: 145px;
-    float: left;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
+	background: lime;
+	width: 145px;
+	float: left;   /*<- 나는 position absolute 했는데 강사님은 float 를 주었다.
 } 
  */
 
@@ -718,22 +718,22 @@ clear: both;
 
 /* my code */
 .odd .term-list-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .even .term-list-thumbnail {
-    position: absolute;
-    top: 0;
-    right: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* teacher code */
 /* 
 .odd .term-list-thumbnail {
-    background-color: orange;
-    margin-left: 0;
-    float: left;  /*- 나는 position absolute 했는데 강사님은 float 를 주었다.
+	background-color: orange;
+	margin-left: 0;
+	float: left;  /*- 나는 position absolute 했는데 강사님은 float 를 주었다.
 } 
 */
 /* 
@@ -748,16 +748,16 @@ clear: both;
 
 /* my code */
 .term-list-brief{
-    margin-top: 10px;
-    margin-left: 5px;
-    min-height: 50px;
+	margin-top: 10px;
+	margin-left: 5px;
+	min-height: 50px;
 }
 
 /*teacher code  */
 /* 
 .term-list-brief{
-    margin-left: 0px;
-    margin-top: 5px;
+	margin-left: 0px;
+	margin-top: 5px;
 } 
 */
 
@@ -769,78 +769,78 @@ clear: both;
 /* 검색 폼 */
 
 .group2 {
-    width: 380px;
-    /* background: orange; */
+	width: 380px;
+	/* background: orange; */
 }
 
 
 .search-form {
-    border: 1px solid #aaa;
-    /* ┌  = border-bottom: 0; */
-    border-bottom-color: #fff;
-    border-radius: 15px 15px 0 0;
-    padding: 15px 25px 10px;
-    background: #ccc linear-gradient(180deg, #ccc, #fff);
-    font-size: 1.4rem;
-    /* display: flex;  <- 여기다가 flex 주면 fieldset만 flex-item 이 되는 꼴이니까
-    여기에 flex 를 주면 안된다.*/
+	border: 1px solid #aaa;
+	/* ┌  = border-bottom: 0; */
+	border-bottom-color: #fff;
+	border-radius: 15px 15px 0 0;
+	padding: 15px 25px 10px;
+	background: #ccc linear-gradient(180deg, #ccc, #fff);
+	font-size: 1.4rem;
+	/* display: flex;  <- 여기다가 flex 주면 fieldset만 flex-item 이 되는 꼴이니까
+	여기에 flex 를 주면 안된다.*/
 
 }
 
 .search-form fieldset{
-    /* background-color: yellow; */
-    border: 0;
-    margin: 0;
-    padding: 0;
+	/* background-color: yellow; */
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* teacher code */
 /* ┌ form 같은 경우에 flex 가 안먹는다. 그래서 flex 를 주려고 하는 요소를
 div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽님들의 현답 */
 .search-form div[role="group"] {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .search-form label::before {
-    content: '\e802';
-    font-family: 'fontello';
-    display: inline-block;
-    margin-right: .2em;
+	content: '\e802';
+	font-family: 'fontello';
+	display: inline-block;
+	margin-right: .2em;
 }
 
 .search-form label {
-    font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 .search-form label,
 .btn-search {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 
 .search-form input[name="search"] {
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 1px 1px 1px 5px;
-    height: 24px;
-    /* ┌ width: 190px; <- 대신에 flex-grow 주면 된다.*/
-    /* flex-grow: 1; */
-    width: 200px; /*<- firefox 와의 cross browsing 하려고 
-                        label 이랑 button 에 white-space: nowrap 한 후에 width 값을 주면 된다.;*/
-    margin: 0 5px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 1px 1px 1px 5px;
+	height: 24px;
+	/* ┌ width: 190px; <- 대신에 flex-grow 주면 된다.*/
+	/* flex-grow: 1; */
+	width: 200px; /*<- firefox 와의 cross browsing 하려고 
+						label 이랑 button 에 white-space: nowrap 한 후에 width 값을 주면 된다.;*/
+	margin: 0 5px;
 }
 
 .btn-search {
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #222;
-    font-size: 1.3rem;
-    height: 24px;
-    padding: 0 10px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #222;
+	font-size: 1.3rem;
+	height: 24px;
+	padding: 0 10px;
 }
 
 /* 공지사항 및 자료실 */
@@ -848,91 +848,91 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 /* my code position */
 
 /* .board{
-    position: relative;
-    margin-top: 20px;
-    min-height: 
+	position: relative;
+	margin-top: 20px;
+	min-height: 
 }
 
 .board .tab-act h2  {
-    display: block;
-    color: #db5629;
-    border: 1px solid #db5629;
-    border-bottom: 0;
-    background: transparent;
+	display: block;
+	color: #db5629;
+	border: 1px solid #db5629;
+	border-bottom: 0;
+	background: transparent;
 
 } */
 
 /*.notice{
-     display: none; 
+	 display: none; 
 }*/
 
 /* .notice-heading,
 .pds-heading{
-    float: left;
-    margin: 0;
-    font-weight: 400;background: #ccc linear-gradient(180deg, #ccc, #fff);
-    font-size: 1.4rem;
-    padding: 9px;
-    border: 1px solid #aaa;
-    border-radius: 5px 5px 0 0;
-    color: rgb(92, 91, 91);
+	float: left;
+	margin: 0;
+	font-weight: 400;background: #ccc linear-gradient(180deg, #ccc, #fff);
+	font-size: 1.4rem;
+	padding: 9px;
+	border: 1px solid #aaa;
+	border-radius: 5px 5px 0 0;
+	color: rgb(92, 91, 91);
 }
 
 .notice-list, 
 .pds-list{
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    top: 30px;
-    color: rgb(92, 91, 91);
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 30px;
+	color: rgb(92, 91, 91);
 }
 
 .notice-list li,
 .pds-list li{
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .notice-list a,
 .pds-list a {
-    width: 300px;
-    text-overflow: ellipsis;   
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 300px; 
+	width: 300px;
+	text-overflow: ellipsis;   
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 300px; 
 }
 
 .notice-list a::before,
 .pds-list a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    width: 1em;
-    margin-right: .2em;
-    margin-left: .2em;
+	content: '\f192';
+	font-family: 'fontello';
+	display: inline-block;
+	width: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
 }
 
 
 .notice-more,
 .pds-more {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.4rem;
-    font-weight: 400;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 .icon-plus{
-    color: green;
+	color: green;
 }
 
 .pds{
-    margin: 0;
-    padding: 0;
-    background-color: rgba(218, 112, 214, 0.596);
-    top: 0;
-    left: 100px;
-    display: none;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(218, 112, 214, 0.596);
+	top: 0;
+	left: 100px;
+	display: none;
 } */
 
 
@@ -942,101 +942,101 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 /* normal-flow */
 
 /* .board {
-    position: relative;
-    margin-top: 20px;
+	position: relative;
+	margin-top: 20px;
 }
 
 .board h2{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .tab-act .tab  {
-    display: block;
-    color: #db5629;
-    border: 1px solid #db5629;
-    border-bottom: 0;
-    background: transparent;
+	display: block;
+	color: #db5629;
+	border: 1px solid #db5629;
+	border-bottom: 0;
+	background: transparent;
 }
 
 .tab{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    float: left;
-    padding: 9px;
-    border: 1px solid #aaa;
-    border-radius: 5px 5px 0 0;
-    color: rgb(92, 91, 91);
-    font-size: 1.4rem;
-    font-weight: 400;
-    background: #ccc linear-gradient(180deg, #ccc, #fff);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	float: left;
+	padding: 9px;
+	border: 1px solid #aaa;
+	border-radius: 5px 5px 0 0;
+	color: rgb(92, 91, 91);
+	font-size: 1.4rem;
+	font-weight: 400;
+	background: #ccc linear-gradient(180deg, #ccc, #fff);
 }
 
 .pds .tab{
-    left: 70px;
+	left: 70px;
 }
 
 
 .notice-heading,
 .pds-heading {
-    background-color: red;
+	background-color: red;
 }
 
 .notice-list,
 .pds-list{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    padding-top: 50px;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	padding-top: 50px;
 }
 
 .pds-list{
-    display: none;
+	display: none;
 }
 .notice-list{
-    display: block;
-    /* display: none; 
+	display: block;
+	/* display: none; 
 }
 .notice-list li,
 .pds-list li{
-    margin-bottom: 15px;
-    /* font-size: 1.3rem 
+	margin-bottom: 15px;
+	/* font-size: 1.3rem 
 }
 
 .notice-list a,
 .pds-list a {
-    width: 300px;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;   
-    width: 300px; 
+	width: 300px;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;   
+	width: 300px; 
 }
 
 .notice-list a::before,
 .pds-list a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    width: 1em;
-    margin-right: .2em;
-    margin-left: .2em;
+	content: '\f192';
+	font-family: 'fontello';
+	display: inline-block;
+	width: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
 }
 
 
 .notice-more,
 .pds-more {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.4rem;
-    font-weight: 400;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 .icon-plus::before{
-    color:green;
+	color:green;
 } */
 
 
@@ -1047,141 +1047,230 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 /* teacher code */
 
 .board {
-    background-color: yellow;
-    position: relative;
-    margin-top: 20px;
-    min-height: 180px;
+	background-color: yellow;
+	position: relative;
+	margin-top: 20px;
+	min-height: 200px;
 }
 
 .notice-heading,
 .pds-heading {
-    /* background-color: pink; */
-    float: left;
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 400;
+	/* background-color: pink; */
+	float: left;
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 .tab{
-    display: block;
-    color: #666;
-    border: 1px solid #aaa;
-    border-radius: 5px 5px 0 0;
-    padding: 5px 10px;
-    background: #ccc linear-gradient(180deg #ccc, #eee);
+	display: block;
+	color: #666;
+	border: 1px solid #aaa;
+	border-radius: 5px 5px 0 0;
+	padding: 5px 10px;
+	background: #ccc linear-gradient(180deg #ccc, #eee);
 }
 
 .tab-act .tab{
-    color: #db5629;
-    border-color: #db5629 #db5629 #fff #db5629;
-    background: #fff;
+	color: #db5629;
+	border-color: #db5629 #db5629 #fff #db5629;
+	background: #fff;
 }
 
 .notice-list, 
 .pds-list, 
 .notice-more, 
 .pds-more{
-    display: none;
+	display: none;
 }
 
 .tab-act .notice-list, 
 .tab-act .pds-list, 
 .tab-act .notice-more, 
 .tab-act .pds-more{
-    display: block;
+	display: block;
 }
 
 
 .notice-list,
 .pds-list{
-    background-color: silver;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 100%;
+	background-color: silver;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
 }
 
 .notice-list li,
 .pds-list li {
-    background-color: orange;
-    margin-bottom: 10px;
+	background-color: orange;
+	margin-bottom: 15px;
 }
 .notice-list li::after,
 .pds-list li::after{
-    content: "";
-    display: block;
-    clear: both;
+	content: "";
+	display: block;
+	clear: both;
 }
 
 
 .notice-list a,
 .pds-list a {
-    background-color: skyblue;
-    float: left;
-    /* display: inline-block; */
-    width: 300px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    /* vertical-align: middle; */
+	background-color: skyblue;
+	float: left;
+	/* display: inline-block; */
+	width: 300px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	/* vertical-align: middle; */
 }
 
 
 .notice-list a::before,
 .pds-list a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    margin-right: .2em;
+	content: '\f192';
+	font-family: 'fontello';
+	display: inline-block;
+	margin-right: .2em;
 }
 
 .notice-list time,
 .pds-list time{
-    background-color: violet;
-    float: right;
+	background-color: violet;
+	float: right;
 }
 
 .pds-list {
-    background-color: orange;
+	background-color: orange;
 }
 
 .notice-more,
 .pds-more{
-    position: absolute;
-    /* background-color: lime; */
-    top: -8px;
-    right: -8px;
-    padding: 8px;
+	position: absolute;
+	/* background-color: lime; */
+	top: -8px;
+	right: -8px;
+	padding: 8px;
 }
 
 .icon-plus::before{
-    color: hsla(110, 70%, 50%, 1);
-    /* color:green; */
+	color: hsla(110, 70%, 50%, 1);
+	/* color:green; */
 } 
 
+/* ------------------------------------------ */
+
+/* news */
+
+.news{
+	/* background-color: yellow; */
+	margin-top: 20px;
+	position: relative;
+	/* min-height: 200px; */
+}
+
+.news::before{
+	content: "";
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 80%;
+	height: 1px;
+	background: #ccc linear-gradient(90deg, #ccc, #fff)
+}
+.news-heading{
+	/* background-color: blue; */
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #db5629;
+	/* padding-bottom: 15px; */
+	/* border-bottom: 1px solid #ccc; */
+}
+.news-item {
+	/* background-color: orange; */
+	position: relative;
+	margin-top: 30px;
+	padding-left: 135px;
+
+}
+
+
+.news-item-head-subject {
+	background-color: palegreen;
+	margin: 0;
+	font-size: 1.4rem;
+	/* width: 380px; */
+	/* float: right; */
+	/* margin-bottom: 5px; */
+}
+.news-item-date{
+	background-color: red;
+	/* display: block; */
+	/* width: 380px; */
+	/* float: right; */
+}
+.news-item-brief{
+	background-color: pink;
+	/* float: right; */
+	/* display: inline-block; */
+	margin-top: 15px 0;
+	/* width: 380px; */
+	/* padding-left: 100pt; */
+}
+
+.news-item-thumbnail  {
+	/* display: block; */
+	position: absolute;
+	/* background-color: orchid; */
+	position: absolute;
+	margin: 0;
+	top: 3px;
+	left: 0;
+	text-align: center;
+	/* display: none; */
+	/* float: left; */
+}
+.news-item-thumbnail img {
+	margin-bottom: 15px;
+	box-shadow: 0 15px 20px 2px #ccc;
+}
+
+.news-item-thumbnail figcaption{
+}
+
+.news-more{
+	/* background-color: orange; */
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	padding: 8px;
+}
+
 .group3 {
-    /* background-color: coral; */
-    width: 190px;
+	/* background-color: coral; */
+	width: 190px;
 }
 
 
 
 /* 슬로건 */
 .slogan {
-    background-color: orange;
+	background-color: orange;
 }
 
 .footer-bg {
-    background-color: purple;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+	background-color: purple;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 .footer {
-    background-color: skyblue;
+	background-color: skyblue;
 }
