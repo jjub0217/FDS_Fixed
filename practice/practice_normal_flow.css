@@ -56,7 +56,8 @@ a {
 .slogan,
 .footer {
     width: 940px;
-    margin-left: auto;
+    margin: 0;
+    margin-left:  auto;
     margin-right: auto;
     /* margin-top: 10px; */
 }
@@ -64,9 +65,10 @@ a {
 /* 헤더 */
 
 .header {
-    background: orchid;
+    /* background: orchid; */
+    background: #fff;
     border-radius: 0 0 15px 15px;
-    padding: 10px 30px 40px;
+    padding: 0 30px 1px 30px;
     position: relative;
     /* height: 50px; */
 
@@ -75,10 +77,11 @@ a {
 .logo {
     /* background-color: red; */
     /* float: left; */
+    /* background-color: transparent; */
     position: absolute;
     /* margin-left: 20px; */
-    top: 30px;
-    left: 55px;
+    top: 25px;
+    left: 60px;
 
 }
 
@@ -86,19 +89,22 @@ a {
     /* background-color: rebeccapurple; */
     text-transform: uppercase;
     list-style: none;
-    text-align: end;   
-    margin: 0;
     padding: 0;
-    margin-bottom: 14px;
-    width: 887px;
-    /* font-size: 0; */
+    /* margin-top: 8px; */
+    padding-top: 8px;
+    margin-bottom: 8px;
+    text-align: right;
+    margin-right: -8px;
+    font-size: 0;
+    /* font-size: 1.4rem; */
 }
 
 
 
 .member li,
 .member a{
-    display: inline-block;
+    display: inline-block;  /*<- inline-block 을 만들어서 가로 정렬 시킴*/
+    font-size: 1.4rem;
 
 }
 /* └> li에도, a 에도 둘다한테 inline-block 을 줘야 하는 이유는
@@ -107,39 +113,63 @@ a {
 그래서 부모요소인 li 에도, a 에도 둘다한테 inline-block 을 줘야 한다.*/
 
 .member a {
-    font-size: 1.4rem;
-    padding: 0 6px;
+    padding: 2px 8px 2px 3px;
     margin: 0;
 }
+
+
+/* 메인메뉴 */
+
+
 .navigation {
-    background: salmon;
-    border-top: 1px solid #ccc;
-    height: 50px;
-    padding: 2px 0;
-    border-radius: 0 0 8px 8px;
+    /* background: salmon; */
+    /* border-top: 1px solid #ccc; */
+    /* border-radius: 0 0 8px 8px; */
 }
 
 .menu {
-    background-color: sienna;
+    background: #E582D6 linear-gradient(#e66465, #9198e5);
     list-style: none;
-    margin: 0;
+    margin: 0 0 35px;
     padding: 0;
-    display: inline-block;
-    margin-left: 215px;
+    display: inline-block;  /*<- menu-item 에 display : flex 대체 속성*/
+    /* margin-left: 216px; */
+    padding-left: 225px;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    height: 50px;
 }
 
 .menu-item{
-    display: inline-block;
-    line-height: 48px;
-    /*color: #fff;  <-  왜 상속이 안되지?*/
+    color: #fff;  
+    /* <-  왜 상속이 안되지? : button 에는 font 의 color 가 상속이 안된다.  
+    상속시키려면 button 요소에 직접 color 를 부여하던가, 
+    inherit 속성값을 부여해야 한다.*/
 }
 
 .btn-menu {
-    color: #fff;/*<-  왜*/
-    border: 0;
-    border-left: 1px solid #ccc;
+    /* background-color: teal; */
     background-color: transparent;
-    padding: 0 18px;
+    color: inherit;
+    line-height: 48px;
+    /* color: #fff; */
+    padding: 0 5px;
+    border: 0;
+    border-left: 2px solid rgba(255, 255, 255, 1);
+    padding: 0 19px;
+    cursor: pointer;
+    text-shadow: 
+    1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+}
+
+.menu-act .btn-menu::after{
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
 }
 
 .sub-menu {

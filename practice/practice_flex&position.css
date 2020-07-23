@@ -152,15 +152,15 @@ h1 이 길을 읽게 되서 h1 이 그 뒤로 밀려 올라간다.
     
     border-top: 2px solid rgb(230, 124, 252);
     border-radius: 0 0 10px 10px;
-    height: 48px;
-    display: flex; 
-    flex-wrap: nowrap;
+    height: 47px;
+    display: flex;  /*<- 메뉴들을 가로 정렬 시킴*/ 
+    flex-wrap: nowrap;  /*<- 메뉴들을 안넘치게 함*/
 
 }
 
 .menu-item{
     /* float: left; */
-    position: relative;
+    position: relative; /*<- sub-menu 의 배치기준*/
 }
 
 .btn-menu{
@@ -174,7 +174,7 @@ h1 이 길을 읽게 되서 h1 이 그 뒤로 밀려 올라간다.
     border-bottom: 1px solid;
     line-height: 45px;     /*<-라인하이트 왜 했는지 생각해보기*/
     border-left: 2px solid rgba(225, 225, 255, 0.5);
-    padding: 0 19px;
+    padding: 0 21px;
     cursor: pointer;
     text-shadow: 
     1px 0 1px #000,
