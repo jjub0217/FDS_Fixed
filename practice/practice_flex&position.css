@@ -1,0 +1,351 @@
+
+@import url(../css/normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(../css/fontello.css);
+
+*,
+*::before,   /*  ::before : first child*/
+*::after {   /* ::after : last child  */
+    box-sizing: border-box;
+}
+ /* └> 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+        content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 
+        지금은 박스사이징만 필요한 시점이야!!*/
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    background: #cccccc;
+    color: #181818;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+}
+
+/* 링크 스타일 */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 숨김 컨텐츠*/
+
+.a11y-hidden{
+    background-color: red;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    /* <- 여기까지 해서 "메인메뉴" 라는 텍스트틀 안보이게 하였고,
+    background color red 를 적용시킨 빨간점이 보이게 된다. */
+    margin: -1px;   /*<- -1px을 함으로써 navigation 의 맨 왼쪽 맨 위로 올렸다.*/
+    clip-path: polygon(0 0, 0 0, 0 0);  /*<- 이렇게 하면 하나의 점으로 만들어서 아예 요소를 안보이게 했다.
+    clip-path : "클리핑 범위 안의 부분은 보여지고, 바깥은 숨겨집니다" */
+}
+
+/* 레이아웃 */
+
+.container {
+    /* background: tomato; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/* └> .container에 
+display flex
+flex-flow column nowrap
+align-items center  하는것과 
+
+margin 0 auto 하는것은 같은 모양을 구현해낸다.------*/
+                                           /*-----*/
+.header,                                   /*-----*/
+.visual,                                   /*-----*/
+.main,                                     /*-----*/
+.slogan,                                   /*-----*/ 
+.footer {                                  /*-----*/
+                                           /*-----*/  
+    width: 940px;                          /*-----*/
+                                           /*-----*/
+    /* margin: 0 auto; ---------------------------*/
+}
+
+
+.header {
+    /* background: rgba(135, 207, 235, 0.705); */
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 0 25px;
+    position: relative;
+    /* height: auto; */
+}
+
+
+.logo {
+    /* background-color: red; */
+    position: absolute;     /*<- logo의 절대 기준은 header가 되었다. */
+    top: 22px;
+    left: 60px;
+}
+/* └> logo a 에 css 를 적용하면 a 만 띄워지는 거니까 
+h1 이 길을 읽게 되서 h1 이 그 뒤로 밀려 올라간다. 
+하지만 logo 에만 css 적용을 하면 h1 자체에 적용되는거기때문에 
+그 뒤로 밀려 올라갈 요소도 없고, 길을 잃게 될 요소도 없게 되는것이다.
+-> 그래서 logo a 가 아니라, logo 에 position 을 준것이다.   */
+
+
+
+/* 멤버링크 */
+
+.member {
+    /* background-color: yellow; */
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: -8px;
+     
+    /* padding-left: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: -8px; 
+    text-align: right;
+    font-size: 0; */
+}
+
+.member li {
+    font-size: 1.4rem;
+    /* display: inline-block; */
+    
+}
+.member a{
+    
+    display: inline-block;
+}
+.member li a {
+    padding: 2px 8px 2px 3px;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    
+}
+
+/* 메인메뉴 */
+
+.navigation {
+    /* background: steelblue; */
+}
+
+.menu {
+    /* background-color: transparent; */
+    /* background-color: yellow; */
+    background: #E582D6 linear-gradient(#e66465, #9198e5);
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 35px;
+    padding-left: 225px;
+    /* margin-left: 225px; */
+    
+    border-top: 2px solid rgb(230, 124, 252);
+    border-radius: 0 0 10px 10px;
+    height: 47px;
+    display: flex;  /*<- 메뉴들을 가로 정렬 시킴*/ 
+    flex-wrap: nowrap;  /*<- 메뉴들을 안넘치게 함*/
+
+}
+
+.menu-item{
+    /* float: left; */
+    position: relative; /*<- sub-menu 의 배치기준*/
+}
+
+.btn-menu{
+    /* background-color: blue; */
+    background-color: transparent;
+    /* background-color: blue;  */
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 0;
+    border-bottom: 1px solid;
+    line-height: 45px;     /*<-라인하이트 왜 했는지 생각해보기*/
+    border-left: 2px solid rgba(225, 225, 255, 0.5);
+    padding: 0 21px;
+    cursor: pointer;
+    text-shadow: 
+    1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+}
+
+
+.menu-act .btn-menu::after{
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+}
+/*└> 너무 신기하지 않니? btn-menu 에 padding 좌우로 줘서 좌우로 너비가 넓어졌는데
+거기다가 after 해서 height 값을 주면 padding 줘서 넓어진 전체 너비에 after 값이 
+들어가는게 아니라, 딱 btn-menu의 텍스트의 after 에만 적용이 되고 있잖아. 
+너무 신기하지 않니? : 왜냐하면, after 를 준 요소는 display block 을 줘서 
+block 요소가 되었잖아. block 요소가 자식요소가 된다면, 그 요소는 부모요소의
+padding 값을 제외한 컨텐트 박스만 너비로 치기 때문에 부모요소인 btn-menu 에 
+padding 을 줘서 넓어진 전체 너비가 아니라, 해당 부모요소의 padding을 제외한 
+너비만 차지하기 때문에 텍스트에만 after 가 적용되는 것이란다.  */
+
+
+.sub-menu{
+    /* background: red; */
+    position: absolute; /*<- absolute + offset 을 줄때만 position relative 와 연관되어 배치가 이동되어 움직여지는 것이다.
+                                그래서 position absolute 를 준것이고, absolute 를 안주면 sub-menu의 text box width 값까지 차지해서 
+                                float left 를 하게 되기 때문에 sub-menu 의 width 값만큼 옆으로 밀리게 된다.
+                                그래서 position absolute 를 준것이다.*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    /* justify-content: space-between; */
+    /* display: inline-block; */
+}
+.sub-menu a{
+    margin: 0;
+    margin-right: 10px;
+    display: inline-block;
+    padding: 7px 0;
+}
+
+.sub-menu a::before{
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:hover
+{
+    content: '\e800';
+    color: #9198e5;
+}
+/* └> 이전에 적용시켰던 before 효과가 hover 하면 
+효과가 바뀐다.*/
+
+.sub-menu a:focus::before,
+.sub-menu a:focus{
+    content: '\e800';
+    color: #9198e5;
+}
+/* └> 이전에 적용시켰던 before 효과가 focus 하면 
+효과가 바뀐다. */
+
+.sub-menu1{
+    /* display: none; */
+    /* background: yellow; */
+}
+
+
+.sub-menu2,
+.sub-menu3,
+.sub-menu4{
+    display: none;
+}
+.sub-menu5,
+.sub-menu6{
+    display: none;
+}
+
+
+.sub-menu1, 
+.sub-menu2, 
+.sub-menu3{
+left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6{
+    right: 0;
+}
+
+.visual {
+    background-color: darkslategrey;
+    height: 120px;
+}
+
+.main {
+    background-color: violet;
+    min-height: 450px;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;    /*<- 가지고 있는 컨텐츠 만큼 늘리기 위해. 낭비되는 공백을 없애기 위해서.*/
+}
+
+
+.group {
+    width: 250px;
+}
+
+.group1 {
+    background-color: burlywood;
+}
+
+.group1 .box {
+    height: 150px;
+    background: red;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.group2 {
+    background-color: greenyellow;
+}
+
+.group3 {
+    background-color: lightcoral;
+}
+
+.slogan {
+    background-color: mediumseagreen;
+    height: auto;
+}
+
+.footer-bg {
+    background-color: purple;
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    flex-flow: column nowrap;
+    align-items: center;
+
+    /* flex-flow: row nowrap;
+    justify-content: center; */
+
+}
+
+/* └>  footer-bg에
+    display flex
+    flex flow column nowrap
+    align items center 를 준 이유는 
+    footer 가 footer-bg의 자식요소이며, footer 를 정렬시키기 위해서 
+    display flex 를 주고 / 
+    flex-flow 를 row 를 주어도 되지만 편리성을 위해 column 을 준것이고 /
+    가운데 정렬을 하기 위해 align items center 를 부여하였다. */
+
+
+.footer {
+    background-color: red;
+}
