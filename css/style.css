@@ -770,6 +770,7 @@ clear: both;
 
 .group2 {
     width: 380px;
+    /* background: orange; */
 }
 
 
@@ -842,45 +843,67 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
     padding: 0 10px;
 }
 
-/* board */
+/* 공지사항 및 자료실 */
 
-.board{
-    /* background: yellow; */
+/* my code position */
+
+/* .board{
     position: relative;
     margin-top: 20px;
+    min-height: 
 }
 
-.board .tab-act  {
+.board .tab-act h2  {
     display: block;
-}
+    color: #db5629;
+    border: 1px solid #db5629;
+    border-bottom: 0;
+    background: transparent;
 
+} */
 
-.notice{
-    background: orange;
-}
+/*.notice{
+     display: none; 
+}*/
 
-.notice-heading{
-    margin: 0;
-    padding: 0;
+/* .notice-heading,
+.pds-heading{
     float: left;
+    margin: 0;
+    font-weight: 400;background: #ccc linear-gradient(180deg, #ccc, #fff);
+    font-size: 1.4rem;
+    padding: 9px;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: rgb(92, 91, 91);
 }
 
-.notice-list{
+.notice-list, 
+.pds-list{
     padding: 0;
     list-style: none;
     position: absolute;
-    top: 25px;
+    top: 30px;
+    color: rgb(92, 91, 91);
 }
 
-
-.notice-list a {
-    /* float: left; */
-}
-.notice-list time {
-    /* float: right; */
+.notice-list li,
+.pds-list li{
+    margin-bottom: 15px;
 }
 
-.notice-list a::before {
+.notice-list a,
+.pds-list a {
+    width: 300px;
+    text-overflow: ellipsis;   
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 300px; 
+}
+
+.notice-list a::before,
+.pds-list a::before {
     content: '\f192';
     font-family: 'fontello';
     display: inline-block;
@@ -890,25 +913,254 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 }
 
 
-.notice-more {
+.notice-more,
+.pds-more {
     position: absolute;
     top: 0;
     right: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
-.pds-heading{
-    margin: 0;
-    float: left;
+
+.icon-plus{
+    color: green;
 }
+
 .pds{
     margin: 0;
     padding: 0;
     background-color: rgba(218, 112, 214, 0.596);
-    /* position: absolute; */
     top: 0;
     left: 100px;
     display: none;
+} */
+
+
+/*------------------------------- */
+
+/* my code */
+/* normal-flow */
+
+/* .board {
+    position: relative;
+    margin-top: 20px;
 }
 
+.board h2{
+    margin: 0;
+    padding: 0;
+}
+
+.tab-act .tab  {
+    display: block;
+    color: #db5629;
+    border: 1px solid #db5629;
+    border-bottom: 0;
+    background: transparent;
+}
+
+.tab{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    float: left;
+    padding: 9px;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: rgb(92, 91, 91);
+    font-size: 1.4rem;
+    font-weight: 400;
+    background: #ccc linear-gradient(180deg, #ccc, #fff);
+}
+
+.pds .tab{
+    left: 70px;
+}
+
+
+.notice-heading,
+.pds-heading {
+    background-color: red;
+}
+
+.notice-list,
+.pds-list{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    padding-top: 50px;
+}
+
+.pds-list{
+    display: none;
+}
+.notice-list{
+    display: block;
+    /* display: none; 
+}
+.notice-list li,
+.pds-list li{
+    margin-bottom: 15px;
+    /* font-size: 1.3rem 
+}
+
+.notice-list a,
+.pds-list a {
+    width: 300px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;   
+    width: 300px; 
+}
+
+.notice-list a::before,
+.pds-list a::before {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+}
+
+
+.notice-more,
+.pds-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.icon-plus::before{
+    color:green;
+} */
+
+
+
+
+/* ---------------------------- */
+
+/* teacher code */
+
+.board {
+    background-color: yellow;
+    position: relative;
+    margin-top: 20px;
+    min-height: 180px;
+}
+
+.notice-heading,
+.pds-heading {
+    /* background-color: pink; */
+    float: left;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.tab{
+    display: block;
+    color: #666;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    background: #ccc linear-gradient(180deg #ccc, #eee);
+}
+
+.tab-act .tab{
+    color: #db5629;
+    border-color: #db5629 #db5629 #fff #db5629;
+    background: #fff;
+}
+
+.notice-list, 
+.pds-list, 
+.notice-more, 
+.pds-more{
+    display: none;
+}
+
+.tab-act .notice-list, 
+.tab-act .pds-list, 
+.tab-act .notice-more, 
+.tab-act .pds-more{
+    display: block;
+}
+
+
+.notice-list,
+.pds-list{
+    background-color: silver;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+}
+
+.notice-list li,
+.pds-list li {
+    background-color: orange;
+    margin-bottom: 10px;
+}
+.notice-list li::after,
+.pds-list li::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.notice-list a,
+.pds-list a {
+    background-color: skyblue;
+    float: left;
+    /* display: inline-block; */
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    /* vertical-align: middle; */
+}
+
+
+.notice-list a::before,
+.pds-list a::before {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+}
+
+.notice-list time,
+.pds-list time{
+    background-color: violet;
+    float: right;
+}
+
+.pds-list {
+    background-color: orange;
+}
+
+.notice-more,
+.pds-more{
+    position: absolute;
+    /* background-color: lime; */
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.icon-plus::before{
+    color: hsla(110, 70%, 50%, 1);
+    /* color:green; */
+} 
 
 .group3 {
     /* background-color: coral; */
