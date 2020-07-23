@@ -1047,7 +1047,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 /* teacher code */
 
 .board {
-	background-color: yellow;
+	/* background-color: yellow; */
 	position: relative;
 	margin-top: 20px;
 	min-height: 200px;
@@ -1094,7 +1094,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 .notice-list,
 .pds-list{
-	background-color: silver;
+	/* background-color: silver; */
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -1106,7 +1106,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 .notice-list li,
 .pds-list li {
-	background-color: orange;
+	/* background-color: orange; */
 	margin-bottom: 15px;
 }
 .notice-list li::after,
@@ -1119,7 +1119,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 .notice-list a,
 .pds-list a {
-	background-color: skyblue;
+	/* background-color: skyblue; */
 	float: left;
 	/* display: inline-block; */
 	width: 300px;
@@ -1140,12 +1140,12 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 .notice-list time,
 .pds-list time{
-	background-color: violet;
+	/* background-color: violet; */
 	float: right;
 }
 
 .pds-list {
-	background-color: orange;
+	/* background-color: orange; */
 }
 
 .notice-more,
@@ -1201,7 +1201,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 
 .news-item-head-subject {
-	background-color: palegreen;
+	/* background-color: palegreen; */
 	margin: 0;
 	font-size: 1.4rem;
 	/* width: 380px; */
@@ -1209,13 +1209,13 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	/* margin-bottom: 5px; */
 }
 .news-item-date{
-	background-color: red;
+	/* background-color: red; */
 	/* display: block; */
 	/* width: 380px; */
 	/* float: right; */
 }
 .news-item-brief{
-	background-color: pink;
+	/* background-color: pink; */
 	/* float: right; */
 	/* display: inline-block; */
 	margin-top: 15px 0;
