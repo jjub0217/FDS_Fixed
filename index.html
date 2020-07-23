@@ -27,6 +27,9 @@
 	<meta charset="UTF-8">
 	<title>웹카페-HTML5, CSS3, 웹표준, 웹접근성</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="./js/jquery.min.js" defer></script>
+	<script src="./js/menu-tab.js" defer></script>
+
 </head>
 
 <body>
@@ -206,23 +209,23 @@
 						<ul class="notice-list">
 							<li>
 								<a href="">HTML의 모든 것을 알려주마 샘플 활용법</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">W3C 사이트 리뉴얼 및 공지사항</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">KWCAG 2.1 소식</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 						</ul>
 						<a href="#" class="notice-more icon-plus" aria-labelledby="noticeHeading">더보기</a>
@@ -234,28 +237,42 @@
 						<ul class="pds-list">
 							<li>
 								<a href="">디자인 사이트 링크 모음</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">웹 접근성 관련 자료 모음</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">예제 샘플 응용해보기</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 							<li>
 								<a href="">로얄티 프리 이미지 자료</a>
-							<time datetime="2020-07-22T17:03:15">2020.07.22</time>
+								<time datetime="2020-07-22T17:03:15">2020.07.22</time>
 							</li>
 						</ul>
 						<a href="#" class="pds-more icon-plus" aria-labelledby="pdsHeading">더보기</a>
 					</section>
 				</div>
+
+				<section class="news">
+					<h2 class="news-heading" id="newsHeading">새소식</h2>
+					<article class="news-item">
+						<h3 class="news-item-head-subject">W3C 사이트가 리뉴얼되었습니다.</h3>
+						<time class="news-item-date" datetime="2020-07-23T15:56:12">2020.07.23</time>
+						<p class="news-item-brief">디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성 되어있습니다.</p>
+						<figure class="news-item-thumbnail">
+							<img src="./images/news.gif" alt="새로운 표준인 HTML5를 발표하면서 새롭게 리뉴얼 된 W3C 사이트">
+							<figcaption>W3C 리뉴얼</figcaption>
+						</figure>
+					</article>
+					<a href="#" class="news-more icon-plus" aria-labelledby="newsHeading">더보기</a>
+				</section>
 			</div>
 			<div class="group group3">group3</div>
 			<!--<div class="clearfix"></div>-->
@@ -268,9 +285,32 @@
 			<footer class="footer">footer</footer>
 		</div>
 	</div>
-	<script>
-		const btn = document.querySelector
-	</script>
+	<!-- <script>
+const items = document.querySelector('.menu-item');
+console.log(items);
+
+const btn = document.querySelector('.btn-menu');
+console.log(btn);
+
+const panel = document.querySelector('.board section');
+console.log(panel);
+
+const tab = document.querySelector('.tab');
+console.log(tab);
+
+function item(e){
+	if()
+}
+btn.addEventListener('click', function(){
+	if(items.classList.contains('menu-act')){
+		items.classList.remove('menu-act')
+	}else{
+		items.classList.add('menu-act');
+	};
+});
+
+</script> -->
+
 </body>
 
 </html>
