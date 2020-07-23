@@ -1245,7 +1245,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
     margin-right: .2em;
 }
 
-.notice-list time,
+.notice-list time, 
 .pds-list time{
     /* background-color: violet; */
     float: right;
