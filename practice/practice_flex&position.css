@@ -19,10 +19,16 @@ html {
 
 body {
     font-size: 1.6rem;
-    background: #cccccc;
+    background: #fff;
     color: #181818;
     font-family: 'Spoqa Han Sans';
     font-weight: 400;
+    background: url(../css/images/bg_flower.png) no-repeat 50% 0 scroll,
+    #fff linear-gradient(to bottom,
+        #ccc 0%,
+        #fff 70%,
+        #fff 100%);
+
 }
 
 /* 링크 스타일 */
@@ -277,8 +283,9 @@ left: 0;
 }
 
 .visual {
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
     height: 120px;
+
 }
 
 .main {
