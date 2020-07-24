@@ -1251,6 +1251,111 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	padding: 8px;
 }
 
+/* 신규 이벤트 및 관련 사이트 */
+/* 신규 이벤트 */
+
+.gradient-box {
+	/* background-color: pink; */
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 10px;
+	background: #ccc linear-gradient(180deg, #ccc, #eee);
+
+}
+.event{
+	background-color: yellow;
+	border-bottom: 1px solid #aaa;
+	position: relative;
+}
+
+/* .related::before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100px;
+	background-color: red;
+} */
+
+.event-heading, 
+.related-heading{
+	font-size: 1.6rem;
+	margin: 0;
+}
+
+.event-heading span, 
+.related-heading span {
+	color: #db5629;
+	margin-left: 5px;
+}
+
+.event-thumbnail {
+	/* width: calc(100% - 1px); */
+}
+
+.event-thumbnail,
+.event-brief{
+	margin: 10px 0;
+}
+
+.event-thumbnail img{
+	box-shadow: 4px 4px #aaa;
+	border: 1px solid #ccc;
+
+}
+.event-brief em{
+	font-style: normal;
+}
+.btn-wrap{
+	/* background-color: yellow; */
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 18px;
+}
+
+.btn-wrap button{
+	/* background-color: skyblue; */
+	/* background-image: url(./images/back_forward.png); */
+	/* overflow: hidden; */
+	/* border: 0; */
+	/* width: 19px; */
+	/* height: 100%; */
+	/* ┌ text-indent: -120px; 
+	   │ white-space: nowrap; 
+	   
+	   │ <button aria-label = "이전 이벤트 보기"> 
+	   │ <title>이전 이벤트 보기</title> */
+	/* padding: 18px 0 0 0; */
+	/* cursor: pointer; */
+}
+
+
+.btn-prev, .btn-next{
+	background: #ccc url(./images/back_forward.png) no-repeat;
+	overflow: hidden;
+	border: 0;
+	width: 19px; 
+	/* height: 18px; */
+	height: 100%; 
+	padding: 0;
+	cursor: pointer; 	
+}
+
+.btn-prev{
+	/* background: url(./images/back_forward.png) no-repeat; */
+
+}
+.btn-next{
+	/* background: url(./images/back_forward.png) no-repeat; */
+	background-position: -36px 0;
+}
+
+
+
+.related{
+	margin-top: 20px;
+}
+
 .group3 {
 	/* background-color: coral; */
 	width: 190px;
