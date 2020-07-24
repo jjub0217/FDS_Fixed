@@ -1246,8 +1246,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	padding: 8px;
 }
 
-/* 신규 이벤트 및 관련 사이트 */
-/* 신규 이벤트 */
+/* 신규 이벤트 및 관련 사이트, 인기 사이트 */
 
 .gradient-box {
 	/* background-color: pink; */
@@ -1259,13 +1258,15 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 }
 
 .event-heading, 
-.related-heading{
+.related-heading,
+.favorite-heading{
 	font-size: 1.6rem;
 	margin: 0;
 }
 
 .event-heading span, 
-.related-heading span {
+.related-heading span,
+.favorite-heading span {
 	color: #db5629;
 	margin-left: 5px;
 }
@@ -1388,6 +1389,137 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	width: 190px;
 }
 
+/* ---------------------------------- */
+
+/* 인기 사이트 */
+.group3 .gradient-box:nth-child(2){
+	margin-top: 20px;
+}
+
+.favorite{
+	position: relative;
+}
+
+.favorite-list{
+	/* background-color: yellow; */
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	/* position: relative; */
+}
+
+
+
+
+/* teacher code --------------*/
+
+/* position 부여 */
+/* .favorite-list li{
+	background-color: orange;
+	counter-increment: number;
+	margin-top: 5px;
+	position: relative;
+} */
+
+/* flex 부여 */
+.favorite-list li{
+	/* background-color: orange; */
+	counter-increment: number;
+	margin-top: 5px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+}
+
+
+
+.favorite-list li::before{
+	content: counter(number);
+	display: inline-block;
+	padding: 2px 5px;
+	color: #fff;
+	background-color: #aaa;
+	border-radius: 2px;
+	margin-right: 5px;
+	font-size: 1.3rem;
+}
+
+/* ------------------------- */
+
+
+
+
+/* my code */
+
+/* normal frow 부여 */
+/* .favorite-list em {
+	position: absolute;
+	right: 0;
+	width: 9px;
+	text-indent: -999px;
+	background-color: pink;
+} */
+
+
+.up, 
+.down, 
+.stop {
+	/* background-color: pink; */
+	/* display: inline-block; */
+	/* float: right; */	/*<- 공수가 너무 많이 들어간다*/
+	/* position: absolute; */
+	/* top: 50%; */
+	/* margin-top: -5px; */
+	/* right: 0; */
+	width: 9px;
+	height: 11px;
+	/* text-indent: -999px; */
+	padding-top: 11px;
+	overflow: hidden;
+	background: url(/css/images/rank.png) no-repeat;
+}
+
+
+/* teacher code ---------------------- */
+
+/* flex 부여*/
+.favorite-list li a{
+	/* background-color: lime; */
+	/* display: inline-block; */
+	flex-grow: 1;
+}
+
+/* -------------------------------- */
+
+
+.up{
+	/* background: url(/css/images/rank.png) no-repeat; */
+	
+	/* background-position-y: 4px; */
+	/* background-position-x: right; */
+	background-position: 0 0;	/*<- 디폴트 값이기때문에 부여하지 않아도 되지만 명시적으로 부여하자.*/
+}
+.down{
+	/* background: url(/css/images/rank.png) no-repeat; */
+	
+	background-position: 0 100%;
+	/* background-position-y: -40px; */
+	/* background-position-x: right; */
+}
+.stop{
+	/* background: url(/css/images/rank.png) no-repeat; */
+	
+	background-position: 0 50%;
+	/* background-position-y: -15px; */
+	/* background-position-x: right; */
+}
+
+.favorite-more{
+	position: absolute;
+	padding: 8px;
+	top: -8px;
+	right: -8px;
+}
 
 
 /* 슬로건 */
