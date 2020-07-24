@@ -377,10 +377,10 @@ opacity: 0;
 	min-height: 450px;
 	padding: 30px 30px;
 	justify-content: center;
-	display: flex;	/*<-   flex 를 사용하여 */
-	flex-flow: row nowrap;	/*    float 한 것과    */
+	display: flex;					  /*<-   flex 를 사용하여 */
+	flex-flow: row nowrap;			 /*    float 한 것과    */
 	justify-content: space-between;	/*    같게            */
-	align-items: flex-start;	/*    구현          ->*/
+	align-items: flex-start;	   /*    구현          ->*/
 }
 
 .group1 {
@@ -1257,19 +1257,6 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	background: #ccc linear-gradient(180deg, #ccc, #eee);
 
 }
-.event{
-	background-color: yellow;
-	border-bottom: 1px solid #aaa;
-	position: relative;
-}
-
-/* .related::before{
-	content: "";
-	position: absolute;
-	height: 2px;
-	width: 100px;
-	background-color: red;
-} */
 
 .event-heading, 
 .related-heading{
@@ -1282,6 +1269,23 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	color: #db5629;
 	margin-left: 5px;
 }
+
+/* 신규 이벤트 */
+.event{
+	/* background-color: yellow; */
+	border-bottom: 1px solid #aaa;
+	position: relative;
+}
+
+/* .related::before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100px;
+	background-color: red;
+} */
+
+
 
 .event-thumbnail {
 	/* width: calc(100% - 1px); */
@@ -1352,18 +1356,31 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 }
 
 .related-list{
+	background-color: #fff;
 	list-style: none;
-	padding: 0;
-	margin: 0;
-	margin-top: 10px;
+	padding-left: 0;
+	margin: 10px 0 0 0;
+	overflow: hidden;
+	height: 27px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	transition: all 200ms; 	/*<- hover 는 진짜 아예 태초에 변하기 전 요소에 부여해줘야 한다. */
+}
+.related-list li{
+	padding: 2px 5px;
+}
+
+.related-list:hover{
+	padding: 10px 0;
+	height: 147px;
+	/* transition: 1s; <- 여기에 transition 부여하면 안된다.*/
 }
 
 .related-list a {
-	background-color: yellow;
 	display: block;
-	padding: 5px 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	text-indent: 10px;
+	/* height: 25px; */
+	line-height: 21px;
 }
 
 .group3 {
