@@ -132,7 +132,8 @@ a {
     list-style: none;
     margin: 0 0 35px;
     padding: 0;
-    display: inline-block;  /*<- menu-item 에 display : flex 대체 속성*/
+    display: inline-block;
+    /*<- menu-item 에 display : flex 대체 속성*/
     /* margin-left: 216px; */
     padding-left: 225px;
     border-top: 2px solid #000;
@@ -141,10 +142,12 @@ a {
 }
 
 .menu-item{
+    display: inline-block;  
     color: #fff;  
     /* <-  왜 상속이 안되지? : button 에는 font 의 color 가 상속이 안된다.  
     상속시키려면 button 요소에 직접 color 를 부여하던가, 
     inherit 속성값을 부여해야 한다.*/
+    position: relative;
 }
 
 .btn-menu {
@@ -173,8 +176,71 @@ a {
 }
 
 .sub-menu {
-    display: none;
+    /* display: none; */
+    color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    position: absolute;
+    white-space: nowrap;
+    background-color: yellow;
+    /* display: inline-block; */
 } 
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a{
+    padding: 0 5px;
+}
+.sub-menu a::before{
+    content: '\f192';
+    font-family: 'fontello';
+    margin-right: .5rem;
+}
+
+.sub-menu1 {
+    /* display: block; */
+    /* display: none; */
+
+}
+.sub-menu2 {
+    display: none;
+
+}
+.sub-menu3 {
+    display: none;
+
+}
+.sub-menu4 {
+    display: none;
+
+}
+.sub-menu5 {
+    display: none;
+
+}
+.sub-menu6 {
+    display: none;
+
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3{
+    left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6{
+    right: 0;
+}
+
+
+
 .visual {
     background: yellow;
 }
