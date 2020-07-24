@@ -1,0 +1,334 @@
+@import url(../css/normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(../css/fontello.css);
+
+*,
+*::before,   /*  ::before : first child*/
+*::after {   /* ::after : last child  */
+    box-sizing: border-box;
+}
+ /* └> 이게 만들어지면(모든게 생성되는 첫 시점에) 박스사이징을 보더박스 로 할거야.
+        content: ""; 이거는 이게 필요한 시점에 내가 다시 선언해줄게^^~ 
+        지금은 박스사이징만 필요한 시점이야!!*/
+
+
+html {
+    font-size: 10px;
+}
+
+body { 
+    font-size: 1.6rem;
+    background: #cccccc;
+    color: #181818;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 숨김 컨텐츠 */
+
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    display: block;
+
+}
+/* 레이아웃 */
+
+.container {
+    /* background-color: orange; */
+    /* padding: 0 30px; */
+    
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+    width: 940px;
+    margin: 0;
+    margin-left:  auto;
+    margin-right: auto;
+    /* margin-top: 10px; */
+}
+
+/* 헤더 */
+
+.header {
+    /* background: orchid; */
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px 1px 30px;
+    position: relative;
+    /* height: 50px; */
+
+}
+
+.logo {
+    /* background-color: red; */
+    /* float: left; */
+    /* background-color: transparent; */
+    position: absolute;
+    /* margin-left: 20px; */
+    top: 25px;
+    left: 60px;
+
+}
+
+.member {
+    /* background-color: rebeccapurple; */
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+    /* margin-top: 8px; */
+    padding-top: 8px;
+    margin-bottom: 8px;
+    text-align: right;
+    margin-right: -8px;
+    font-size: 0;
+    /* font-size: 1.4rem; */
+}
+
+
+
+.member li,
+.member a{
+    display: inline-block;  /*<- inline-block 을 만들어서 가로 정렬 시킴*/
+    font-size: 1.4rem;
+
+}
+/* └> li에도, a 에도 둘다한테 inline-block 을 줘야 하는 이유는
+부모요소인 li 가 block 요소라서, 그 자식요소의 a 에 inline-block 을 준다해도
+적용이 안된다. 
+그래서 부모요소인 li 에도, a 에도 둘다한테 inline-block 을 줘야 한다.*/
+
+.member a {
+    padding: 2px 8px 2px 3px;
+    margin: 0;
+}
+
+
+/* 메인메뉴 */
+
+
+.navigation {
+    /* background: salmon; */
+    /* border-top: 1px solid #ccc; */
+    /* border-radius: 0 0 8px 8px; */
+}
+
+.menu {
+    background: #E582D6 linear-gradient(#e66465, #9198e5);
+    list-style: none;
+    margin: 0 0 35px;
+    padding: 0;
+    display: inline-block;
+    /*<- menu-item 에 display : flex 대체 속성*/
+    /* margin-left: 216px; */
+    padding-left: 225px;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    height: 50px;
+}
+
+.menu-item{
+    display: inline-block;  
+    color: #fff;  
+    /* <-  왜 상속이 안되지? : button 에는 font 의 color 가 상속이 안된다.  
+    상속시키려면 button 요소에 직접 color 를 부여하던가, 
+    inherit 속성값을 부여해야 한다.*/
+    position: relative;
+}
+
+.btn-menu {
+    /* background-color: teal; */
+    background-color: transparent;
+    color: inherit;
+    line-height: 48px;
+    /* color: #fff; */
+    padding: 0 5px;
+    border: 0;
+    border-left: 2px solid rgba(255, 255, 255, 1);
+    padding: 0 19px;
+    cursor: pointer;
+    text-shadow: 
+    1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+}
+
+.menu-act .btn-menu::after{
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+}
+
+.sub-menu {
+    /* display: none; */
+    color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    position: absolute;
+    white-space: nowrap;
+    background-color: yellow;
+    /* display: inline-block; */
+} 
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a{
+    padding: 0 5px;
+}
+.sub-menu a::before{
+    content: '\f192';
+    font-family: 'fontello';
+    margin-right: .5rem;
+}
+
+.sub-menu1 {
+    /* display: block; */
+    /* display: none; */
+
+}
+
+.sub-menu2,
+.sub-menu3,
+.sub-menu4{
+    display: none;
+}
+.sub-menu5,
+.sub-menu6{
+    display: none;
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3{
+    left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6{
+    right: 0;
+}
+
+
+
+.visual {
+    /* background-color: darkslategrey; */
+    height: 120px;
+    position: relative;
+}
+
+.visual-text{
+    /* background-color: yellow; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    animation: textAni 2s ease-in-out forwards;
+}
+
+
+@keyframes textAni{
+
+    0%{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(0, 0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 75px);
+    }
+}
+
+
+.visual::before,
+.visual::after {
+    animation: bgAni 1s ease-in-out infinite alternate;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.visual::before{
+    /* background-color: pink; */
+    background-image: url(../css/images/ani_flower_01.png), url(../css/images/ani_flower_02.png);
+    /*<-위에 background-repeat 했기 때문에 여기에 단축속성 쓰면 
+    덮어쓰여지기 때문에 개별속성 써야 한다.*/
+    background-position: 0 -10px, 670px 0;
+}
+
+.visual::after{
+    /* content: ""; <- content box 를 만드는게 아니라 그저 배경을 꾸밀 뿐이기 때문에 
+    content 속성을 부여하지 않아도 된다.*/
+    background-image: url(../css/images/ani_flower_03.png), url(../css/images/ani_flower_04.png);
+    animation-delay: 1s;
+    background-position: 300px 0, 800px 20px;
+}
+
+@keyframes bgAni{
+    0%{
+        opacity: 1;
+    }
+    100%{
+    opacity: 0;
+    }
+}
+
+.main {
+    background: tomato;
+}
+
+.group{
+    background: yellowgreen;
+}
+
+.group1 {
+    background: green;
+}
+.group2 {
+    background: skyblue;
+}
+.group1 {
+    background: pink;
+}
+
+.slogan {
+    background: slateblue;
+}
+
+.footer-bg {
+    background: steelblue;
+}
+
+.footer {
+    background-color: purple;
+}
+
+
+
+
