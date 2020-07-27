@@ -1559,7 +1559,7 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 }
 .slogan-brief{
 	background-color: skyblue;
-	margin: -9px;
+	margin: -10px;
 	/* padding-top: 10px; */
 	color: #a09784;
 	font-size: 1.3rem;
