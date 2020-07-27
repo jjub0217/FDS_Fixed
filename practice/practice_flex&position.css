@@ -371,13 +371,6 @@ left: 0;
     background-color: rgb(150, 119, 79);
 }
 
-.group1 .box {
-    height: 150px;
-    background: red;
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-}
 
 .group2 {
     background-color: greenyellow;
