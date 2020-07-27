@@ -1524,12 +1524,12 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 /* 슬로건 */
 .slogan {
-	/* background-color: orange; */
+	background-color: orange;
 	padding: 15px 80px 15px 170px;
 	position: relative;
 }
 .slogan-heading{
-	/* background-color: pink; */
+	background-color: pink;
 	margin: 0;
 	width: 110px;
 	height: 83px;
@@ -1558,25 +1558,24 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	/* left: 0; */
 }
 .slogan-brief{
-	/* background-color: skyblue; */
+	background-color: skyblue;
+	margin: -9px;
+	/* padding-top: 10px; */
 	color: #a09784;
-	font-size: 1.4rem;
-	line-height: 25px;
+	font-size: 1.3rem;
+	/* line-height: 30px; */
 	/* top: 0px; */
 	/* padding-left: 110px;	 */
 }
 
 .slogan-brief q{
 	font-weight: 700;
-	/* vertical-align: bottom; */
 }
 
 /* -------쌍타옴표는 가상 요소 클래스인것이다. */
 .slogan-brief q::before{
-	/* vertical-align: bottom; */
+	vertical-align: middle;
 	font-size: 3rem;
-	position: relative;
-	top: 10px;
 	margin-right: 5px;
 }
 .slogan-brief q::after{
