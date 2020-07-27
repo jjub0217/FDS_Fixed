@@ -1524,12 +1524,12 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 /* 슬로건 */
 .slogan {
-	background-color: orange;
+	/* background-color: orange; */
 	padding: 15px 80px 15px 170px;
 	position: relative;
 }
 .slogan-heading{
-	background-color: pink;
+	/* background-color: pink; */
 	margin: 0;
 	width: 110px;
 	height: 83px;
@@ -1558,8 +1558,8 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 	/* left: 0; */
 }
 .slogan-brief{
-	background-color: skyblue;
-	margin: -10px;
+	/* background-color: skyblue; */
+	margin: -8px;
 	/* padding-top: 10px; */
 	color: #a09784;
 	font-size: 1.3rem;
@@ -1584,17 +1584,74 @@ div 로 묶고 role 을 group 로 주면 해결이 된다. : stack overflow 횽�
 
 /* --------------------------------------- */
 
-.slogan-brief span{
-}
 
 .footer-bg {
-	background-color: purple;
+	/* background-color: purple; */
+	background: #ccc linear-gradient(180deg, #ccc, #eee);
 	width: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+.footer{
+	/* background-color: yellow; */
+	/* width: 690px; */
+	padding-left: 170px;
+	padding-right: 100px;
+	position: relative;
 }
 
+/* 푸터 로고 */
+.footer-logo {
+	position: absolute;
+	top: 35px;
+	left: 50px;
+}
+
+/* 가이드 링크 */
+.guide-list {
+	background: #7b8385;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border-radius: 10px;
+	justify-content: space-between;
+	list-style: none;
+	margin-top: 15px;
+	padding: 4px 20px;
+}
+.guide-list a{
+	/* background-color: blue; */
+	/* font-size: 1.4rem; */
+	display: block;
+	padding: 10px 15px;
+	text-transform: uppercase;
+}
+
+/* 주소 및 연락처 */
+.address {
+	font-style: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.address span {
+	margin-right: 10px;
+}
+/* 저작권 */
+.copyright{
+	font-size: 1.4rem;
+	display: block;
+}
+/* 적용 기술 배지 */
+.badge{
+	/* float: right; */
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
 .footer {
-	background-color: skyblue;
+	/* background-color: skyblue; */
 }
