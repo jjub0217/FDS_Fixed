@@ -8,7 +8,7 @@ item.on('mouseover focusin', function(){
   item.removeClass('menu-act')
   $(this).addClass('menu-act');
 });
-// 탭 요소에 키보드 포커그를 받을 수 있도록 tabindex 속성 추가하기
+// 탭 요소에 키보드 포커스를 받을 수 있도록 tabindex 속성 추가하기
 tab.attr('tabindex', '0');
 // 탭 목록에 아이콘을 일괄 추가하기
 list.find('a').attr('class', 'icon-dot-circled');
